@@ -1,7 +1,12 @@
 from __future__ import annotations
-from ageoa.ghost.abstract import AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal
 
-def witness_initializefilter(family: object, event_shape: object, *args, **kwargs) -> AbstractDistribution:
+from sciona.ghost.abstract import AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal
+
+
+def witness_initializefilter(
+    family: object,
+    event_shape: object,
+) -> AbstractDistribution:
     """Shape-and-type check for prior init: initialize filter. Returns output metadata without running the real computation."""
     return AbstractDistribution(
         family=family,

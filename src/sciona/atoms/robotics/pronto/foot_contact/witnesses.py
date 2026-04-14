@@ -1,8 +1,14 @@
 from __future__ import annotations
-from ageoa.ghost.abstract import AbstractArray
 
-def witness_foot_sensing_state_update(foot_sensing_state_in: AbstractArray, *args, **kwargs) -> AbstractArray:
+from sciona.ghost.abstract import AbstractArray
+
+
+def witness_foot_sensing_state_update(
+    foot_sensing_state_in: AbstractArray,
+    sensor_packet: AbstractArray,
+) -> AbstractArray:
     """Shape-and-type check for foot sensing state update. Returns output metadata without running the real computation."""
+    _ = sensor_packet
     result = AbstractArray(
         shape=foot_sensing_state_in.shape,
         dtype="float64",)
