@@ -1,5 +1,5 @@
 from __future__ import annotations
-from ageoa.ghost.abstract import AbstractArray
+from sciona.ghost.abstract import AbstractArray
 
 def witness_velocitystatereadout(state_in: AbstractArray) -> AbstractArray:
     """Describe the velocity-vector/covariance readout from immutable odometry state."""

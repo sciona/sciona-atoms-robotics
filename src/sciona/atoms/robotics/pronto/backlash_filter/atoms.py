@@ -6,7 +6,7 @@ import numpy as np
 from numpy.typing import NDArray
 
 import icontract
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .witnesses import (
     witness_initializebacklashfilterstate,
     witness_updatealphaparameter,

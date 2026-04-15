@@ -5,8 +5,8 @@ from typing import Callable
 import numpy as np
 import icontract
 
-from ageoa.ghost.registry import register_atom
-from ageoa.rust_robotics.witnesses import witness_rk4
+from sciona.ghost.registry import register_atom
+from sciona.atoms.robotics.rust_robotics.witnesses import witness_rk4
 
 # C signature for rk4_ffi:
 # pub extern "C" fn rk4_ffi(func_ptr: OdeFuncC, x0_ptr: *const f64, dim: usize, t0: f64, tf: f64, out_ptr: *mut f64)

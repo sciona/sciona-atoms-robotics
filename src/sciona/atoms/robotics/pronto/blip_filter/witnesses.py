@@ -1,5 +1,5 @@
 from __future__ import annotations
-from ageoa.ghost.abstract import AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal, ANYTHING
+from sciona.ghost.abstract import AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal, ANYTHING
 
 def witness_bandpass_filter(signal: AbstractArray) -> AbstractArray:
     """Shape-and-type check for bandpass filter. Returns output metadata without running the real computation."""

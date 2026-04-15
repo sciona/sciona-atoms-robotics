@@ -1,5 +1,5 @@
 from __future__ import annotations
-"""Auto-generated atom wrappers and FFI bindings following the ageoa pattern."""
+"""Auto-generated atom wrappers and FFI bindings following the sciona pattern."""
 
 
 from typing import Any
@@ -10,7 +10,7 @@ from pathlib import Path
 
 import numpy as np
 import icontract
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .witnesses import witness_stanceestimation, witness_stancestateinit
 
 

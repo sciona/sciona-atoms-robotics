@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from ageoa.ghost.abstract import AbstractArray
+from sciona.ghost.abstract import AbstractArray
 
 
 def witness_stateestimatorinit() -> AbstractArray:

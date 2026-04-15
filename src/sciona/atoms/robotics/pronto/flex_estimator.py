@@ -3,12 +3,12 @@ from __future__ import annotations
 from typing import Any
 Boolean: Any = Any
 
-"""Auto-generated atom wrappers following the ageoa pattern."""
+"""Auto-generated atom wrappers following the sciona pattern."""
 
 
 import numpy as np
 import icontract
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .flex_estimator_witnesses import witness_estimate_flex_deflection
 # Boolean already defined as type alias above
 

@@ -1,12 +1,12 @@
 from __future__ import annotations
-"""Auto-generated atom wrappers following the ageoa pattern."""
+"""Auto-generated atom wrappers following the sciona pattern."""
 from typing import TypedDict
 
 
 import numpy as np
 
 import icontract
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .witnesses import witness_configurecorrectionandyawslippolicy, witness_initializeyawlockstate, witness_readinitialjointangles, witness_readrobotstandingstatus, witness_setjointposeandinitialangles, witness_setrobotstandingstatus, witness_setstandinglinktargets
 import ctypes
 import ctypes.util

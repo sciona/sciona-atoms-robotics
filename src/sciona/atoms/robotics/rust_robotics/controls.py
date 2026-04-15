@@ -4,8 +4,8 @@ import pathlib
 import icontract
 from pydantic import BaseModel, Field
 
-from ageoa.ghost.registry import register_atom
-from ageoa.rust_robotics.witnesses import witness_pure_pursuit
+from sciona.ghost.registry import register_atom
+from sciona.atoms.robotics.rust_robotics.witnesses import witness_pure_pursuit
 
 class Point2D(BaseModel):
     """Pydantic BaseModel representing a 2D Point (equivalent to na::Point2)."""

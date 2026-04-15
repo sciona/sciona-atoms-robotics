@@ -5,7 +5,7 @@ from collections.abc import Mapping
 import numpy as np
 
 import icontract
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .inverse_schmitt_witnesses import witness_inverse_schmitt_trigger_transform
 
 import ctypes

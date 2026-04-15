@@ -7,7 +7,7 @@ StateModelSpec: Any = Any
 import numpy as np
 
 import icontract
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .witnesses import witness_initializefilter, witness_predictstep, witness_querystance, witness_updatestep
 
 import ctypes

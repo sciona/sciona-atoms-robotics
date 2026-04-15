@@ -7,7 +7,7 @@ from typing import TypedDict
 import icontract
 import numpy as np
 
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 
 from .ekf_smoother_witnesses import witness_stateestimatorinit
 
