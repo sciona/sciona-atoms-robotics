@@ -3,8 +3,8 @@
     {
       "node_id": "flex_estimator_root",
       "parent_id": null,
-      "name": "ageoa.pronto.flex_estimator",
-      "description": "Consolidated module for ageoa.pronto.flex_estimator.",
+      "name": "sciona.pronto.flex_estimator",
+      "description": "Consolidated module for sciona.pronto.flex_estimator.",
       "concept_type": "custom",
       "inputs": [],
       "outputs": [],

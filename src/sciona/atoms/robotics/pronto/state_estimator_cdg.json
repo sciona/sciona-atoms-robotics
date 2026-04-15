@@ -3,8 +3,8 @@
     {
       "node_id": "state_estimator_root",
       "parent_id": null,
-      "name": "ageoa.pronto.state_estimator",
-      "description": "Consolidated module for ageoa.pronto.state_estimator.",
+      "name": "sciona.pronto.state_estimator",
+      "description": "Consolidated module for sciona.pronto.state_estimator.",
       "concept_type": "custom",
       "inputs": [],
       "outputs": [],

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.pronto.leg_odometer.posequeryaccessors@ageoa/pronto/leg_odometer/atoms.py:42": {
+    "sciona.atoms.robotics.pronto.leg_odometer.posequeryaccessors@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:42": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pronto.leg_odometer.velocitystatereadout@ageoa/pronto/leg_odometer/atoms.py:21": {
+    "sciona.atoms.robotics.pronto.leg_odometer.velocitystatereadout@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:21": {
       "references": [
         {
           "ref_id": "camurri2020pronto",

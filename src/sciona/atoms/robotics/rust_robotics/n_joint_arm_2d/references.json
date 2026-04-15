@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.rust_robotics.n_joint_arm_2d.controlinputsynthesis@ageoa/rust_robotics/n_joint_arm_2d/atoms.py:103": {
+    "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.controlinputsynthesis@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:103": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -16,7 +16,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.n_joint_arm_2d.dynamicsandlinearizationkernel@ageoa/rust_robotics/n_joint_arm_2d/atoms.py:78": {
+    "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.dynamicsandlinearizationkernel@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:78": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -31,7 +31,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.n_joint_arm_2d.kinematicgoalfeasibility@ageoa/rust_robotics/n_joint_arm_2d/atoms.py:46": {
+    "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.kinematicgoalfeasibility@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:46": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -46,7 +46,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.n_joint_arm_2d.modelspecloadingandsizing@ageoa/rust_robotics/n_joint_arm_2d/atoms.py:22": {
+    "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.modelspecloadingandsizing@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:22": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",

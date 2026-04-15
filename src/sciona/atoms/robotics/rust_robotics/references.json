@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.rust_robotics.controls.pure_pursuit@ageoa/rust_robotics/controls.py:58": {
+    "sciona.atoms.robotics.rust_robotics.controls.pure_pursuit@sciona/atoms/robotics/rust_robotics/controls.py:58": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -16,7 +16,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.dijkstra_path_planning@ageoa/rust_robotics/atoms.py:43": {
+    "sciona.atoms.robotics.rust_robotics.dijkstra_path_planning@sciona/atoms/robotics/rust_robotics/atoms.py:43": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -31,7 +31,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.n_joint_arm_solver@ageoa/rust_robotics/atoms.py:19": {
+    "sciona.atoms.robotics.rust_robotics.n_joint_arm_solver@sciona/atoms/robotics/rust_robotics/atoms.py:19": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -46,7 +46,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.num_methods.rk4@ageoa/rust_robotics/num_methods.py:50": {
+    "sciona.atoms.robotics.rust_robotics.num_methods.rk4@sciona/atoms/robotics/rust_robotics/num_methods.py:50": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",

@@ -3,8 +3,8 @@
     {
       "node_id": "ekf_smoother_root",
       "parent_id": null,
-      "name": "ageoa.pronto.ekf_smoother",
-      "description": "Consolidated module for ageoa.pronto.ekf_smoother.",
+      "name": "sciona.pronto.ekf_smoother",
+      "description": "Consolidated module for sciona.pronto.ekf_smoother.",
       "concept_type": "custom",
       "inputs": [],
       "outputs": [],

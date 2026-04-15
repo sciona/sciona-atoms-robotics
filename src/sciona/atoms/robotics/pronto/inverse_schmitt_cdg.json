@@ -3,8 +3,8 @@
     {
       "node_id": "inverse_schmitt_root",
       "parent_id": null,
-      "name": "ageoa.pronto.inverse_schmitt",
-      "description": "Consolidated module for ageoa.pronto.inverse_schmitt.",
+      "name": "sciona.pronto.inverse_schmitt",
+      "description": "Consolidated module for sciona.pronto.inverse_schmitt.",
       "concept_type": "custom",
       "inputs": [],
       "outputs": [],

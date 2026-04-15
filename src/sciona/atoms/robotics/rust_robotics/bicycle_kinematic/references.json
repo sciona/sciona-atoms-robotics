@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.rust_robotics.bicycle_kinematic.computelinearizedstatematrices@ageoa/rust_robotics/bicycle_kinematic/atoms.py:98": {
+    "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.computelinearizedstatematrices@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -16,7 +16,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.bicycle_kinematic.computesideslipangle@ageoa/rust_robotics/bicycle_kinematic/atoms.py:77": {
+    "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.computesideslipangle@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -31,7 +31,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.bicycle_kinematic.constructgeometrymodel@ageoa/rust_robotics/bicycle_kinematic/atoms.py:30": {
+    "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.constructgeometrymodel@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -46,7 +46,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.bicycle_kinematic.evaluateandinvertdynamics@ageoa/rust_robotics/bicycle_kinematic/atoms.py:139": {
+    "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.evaluateandinvertdynamics@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -61,7 +61,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.bicycle_kinematic.loadmodelfromfile@ageoa/rust_robotics/bicycle_kinematic/atoms.py:45": {
+    "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.loadmodelfromfile@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -76,7 +76,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.rust_robotics.bicycle_kinematic.querygeometryparameters@ageoa/rust_robotics/bicycle_kinematic/atoms.py:61": {
+    "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.querygeometryparameters@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",

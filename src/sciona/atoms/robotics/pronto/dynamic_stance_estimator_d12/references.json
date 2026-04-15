@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.pronto.dynamic_stance_estimator_d12.stanceestimation@ageoa/pronto/dynamic_stance_estimator_d12/atoms.py:46": {
+    "sciona.atoms.robotics.pronto.dynamic_stance_estimator_d12.stanceestimation@sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/atoms.py:46": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pronto.dynamic_stance_estimator_d12.stancestateinit@ageoa/pronto/dynamic_stance_estimator_d12/atoms.py:24": {
+    "sciona.atoms.robotics.pronto.dynamic_stance_estimator_d12.stancestateinit@sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/atoms.py:24": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
