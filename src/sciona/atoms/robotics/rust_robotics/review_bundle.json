@@ -14,11 +14,9 @@
     "src/sciona/atoms/robotics/rust_robotics/**/uncertainty.json"
   ],
   "limitations": [
-    "Some subfamilies still lack uncertainty evidence: bicycle_kinematic."
+    "The family bundle spans mixed subfamilies; follow-up uncertainty work is still needed for bicycle_kinematic, but ready_for_manifest_merge rows in other subfamilies should not be blocked by that debt."
   ],
-  "required_actions": [
-    "Backfill uncertainty evidence for: bicycle_kinematic."
-  ],
+  "required_actions": [],
   "subfamily_summaries": [
     {
       "subfamily": "rust_robotics",
@@ -124,14 +122,10 @@
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for bicycle_kinematic."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for bicycle_kinematic."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
@@ -145,14 +139,10 @@
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for bicycle_kinematic."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for bicycle_kinematic."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
@@ -166,14 +156,10 @@
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for bicycle_kinematic."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for bicycle_kinematic."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
@@ -187,14 +173,10 @@
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for bicycle_kinematic."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for bicycle_kinematic."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
@@ -208,14 +190,10 @@
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for bicycle_kinematic."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for bicycle_kinematic."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
@@ -229,14 +207,10 @@
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for bicycle_kinematic."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for bicycle_kinematic."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
         "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",

@@ -1,0 +1,14 @@
+{
+  "atom": "evaluateandinvertdynamics",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 1.416104,
+      "confidence": 0.6,
+      "n_trials": 500,
+      "epsilon": 1e-08,
+      "input_regime": "finite-difference perturbation over representative kinematic states, perturbing x[3] (forward velocity) while holding geometry and control fixed",
+      "notes": "local perturbation harness, 500/500 trials, nominal geometry lf=1.2 lr=1.6, scalar factor reported as mean output-sensitivity norm across x_dot, jacobian, and inferred control outputs"
+    }
+  ]
+}

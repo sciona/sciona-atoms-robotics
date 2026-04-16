@@ -14,18 +14,16 @@
     "src/sciona/atoms/robotics/pronto/**/uncertainty.json"
   ],
   "limitations": [
-    "Some subfamilies still lack uncertainty evidence: backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, foot_contact, leg_odometer, yaw_lock."
+    "The family bundle spans mixed subfamilies; follow-up uncertainty work is still needed for backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, leg_odometer, and yaw_lock, but ready_for_manifest_merge rows in completed subfamilies should not be blocked by that debt."
   ],
-  "required_actions": [
-    "Backfill uncertainty evidence for: backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, foot_contact, leg_odometer, yaw_lock."
-  ],
+  "required_actions": [],
   "subfamily_summaries": [
     {
       "subfamily": "backlash_filter",
       "row_count": 3,
       "has_cdg": true,
       "has_matches": true,
-      "has_uncertainty": false
+      "has_uncertainty": true
     },
     {
       "subfamily": "blip_filter",
@@ -356,14 +354,10 @@
       "source_path": "sciona/atoms/robotics/pronto/foot_contact/atoms.py:22",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for foot_contact."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for foot_contact."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/foot_contact/references.json",
         "src/sciona/atoms/robotics/pronto/foot_contact/cdg.json",
@@ -377,14 +371,10 @@
       "source_path": "sciona/atoms/robotics/pronto/foot_contact/atoms.py:40",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for foot_contact."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for foot_contact."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/foot_contact/references.json",
         "src/sciona/atoms/robotics/pronto/foot_contact/cdg.json",

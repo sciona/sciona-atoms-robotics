@@ -1,0 +1,14 @@
+{
+  "atom": "foot_sensing_state_update",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 1.0,
+      "confidence": 0.5,
+      "n_trials": 16,
+      "epsilon": 1.0,
+      "input_regime": "exhaustive discrete toggle analysis over boolean left/right sensing state and boolean command overrides",
+      "notes": "discrete transition harness over all 16 state-command combinations; output bit changes tracked against commanded bit changes, with exact overwrite semantics and no stochastic variability"
+    }
+  ]
+}
