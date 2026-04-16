@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "sciona.atoms.robotics.pronto.yaw_lock.configurecorrectionandyawslippolicy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61": {
+    "sciona.atoms.robotics.pronto.yaw_lock.configure_correction_and_yaw_slip_policy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.yaw_lock.initializeyawlockstate@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34": {
+    "sciona.atoms.robotics.pronto.yaw_lock.initialize_yaw_lock_state@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -51,7 +51,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.yaw_lock.readinitialjointangles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145": {
+    "sciona.atoms.robotics.pronto.yaw_lock.read_initial_joint_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -76,7 +76,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.yaw_lock.readrobotstandingstatus@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102": {
+    "sciona.atoms.robotics.pronto.yaw_lock.read_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -101,7 +101,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.yaw_lock.setjointposeandinitialangles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119": {
+    "sciona.atoms.robotics.pronto.yaw_lock.set_joint_pose_and_initial_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -126,7 +126,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.yaw_lock.setrobotstandingstatus@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85": {
+    "sciona.atoms.robotics.pronto.yaw_lock.set_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -151,7 +151,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.yaw_lock.setstandinglinktargets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161": {
+    "sciona.atoms.robotics.pronto.yaw_lock.set_standing_link_targets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161": {
       "references": [
         {
           "ref_id": "camurri2020pronto",

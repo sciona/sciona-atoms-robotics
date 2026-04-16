@@ -14,7 +14,7 @@
     "src/sciona/atoms/robotics/pronto/**/uncertainty.json"
   ],
   "limitations": [
-    "The family bundle spans mixed subfamilies; follow-up uncertainty work is still needed for backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, leg_odometer, and yaw_lock, but ready_for_manifest_merge rows in completed subfamilies should not be blocked by that debt."
+    "The family bundle spans mixed subfamilies; follow-up uncertainty work is still needed for backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, and leg_odometer, but ready_for_manifest_merge rows in completed subfamilies should not be blocked by that debt."
   ],
   "required_actions": [],
   "subfamily_summaries": [
@@ -65,7 +65,7 @@
       "row_count": 7,
       "has_cdg": true,
       "has_matches": true,
-      "has_uncertainty": false
+      "has_uncertainty": true
     }
   ],
   "rows": [
@@ -425,19 +425,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[17]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.configurecorrectionandyawslippolicy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.configure_correction_and_yaw_slip_policy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
@@ -446,19 +442,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[18]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.initializeyawlockstate@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.initialize_yaw_lock_state@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
@@ -467,19 +459,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[19]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.readinitialjointangles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.read_initial_joint_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
@@ -488,19 +476,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[20]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.readrobotstandingstatus@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.read_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
@@ -509,19 +493,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[21]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.setjointposeandinitialangles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_joint_pose_and_initial_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
@@ -530,19 +510,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[22]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.setrobotstandingstatus@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
@@ -551,19 +527,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[23]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.setstandinglinktargets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_standing_link_targets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for yaw_lock."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for yaw_lock."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
         "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",

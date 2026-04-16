@@ -10,13 +10,13 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "initializeyawlockstate",
-        "configurecorrectionandyawslippolicy",
-        "setrobotstandingstatus",
-        "readrobotstandingstatus",
-        "setjointposeandinitialangles",
-        "readinitialjointangles",
-        "setstandinglinktargets"
+        "initialize_yaw_lock_state",
+        "configure_correction_and_yaw_slip_policy",
+        "set_robot_standing_status",
+        "read_robot_standing_status",
+        "set_joint_pose_and_initial_angles",
+        "read_initial_joint_angles",
+        "set_standing_link_targets"
       ],
       "depth": 0,
       "type_signature": "",
@@ -30,7 +30,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "initializeyawlockstate",
+      "node_id": "initialize_yaw_lock_state",
       "parent_id": "YawLock_root",
       "name": "InitializeYawLockState",
       "description": "Create the initial immutable YawLockState container for all persistent fields (parameters, standing flag, joint state, standing links).",
@@ -63,7 +63,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "configurecorrectionandyawslippolicy",
+      "node_id": "configure_correction_and_yaw_slip_policy",
       "parent_id": "YawLock_root",
       "name": "ConfigureCorrectionAndYawSlipPolicy",
       "description": "Set correction cadence and yaw-slip detection policy by returning a new state with updated parameter fields.",
@@ -116,7 +116,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "setrobotstandingstatus",
+      "node_id": "set_robot_standing_status",
       "parent_id": "YawLock_root",
       "name": "SetRobotStandingStatus",
       "description": "Write robot standing status by producing a new immutable state.",
@@ -154,7 +154,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "readrobotstandingstatus",
+      "node_id": "read_robot_standing_status",
       "parent_id": "YawLock_root",
       "name": "ReadRobotStandingStatus",
       "description": "Read current robot standing status from immutable state without mutation.",
@@ -187,7 +187,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "setjointposeandinitialangles",
+      "node_id": "set_joint_pose_and_initial_angles",
       "parent_id": "YawLock_root",
       "name": "SetJointPoseAndInitialAngles",
       "description": "Store joint identity/position inputs and corresponding initial-angle snapshot as a new immutable state.",
@@ -235,7 +235,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "readinitialjointangles",
+      "node_id": "read_initial_joint_angles",
       "parent_id": "YawLock_root",
       "name": "ReadInitialJointAngles",
       "description": "Read stored initial joint angles from immutable state.",
@@ -268,7 +268,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "setstandinglinktargets",
+      "node_id": "set_standing_link_targets",
       "parent_id": "YawLock_root",
       "name": "SetStandingLinkTargets",
       "description": "Set left/right standing link identifiers in a newly returned immutable state.",
@@ -313,8 +313,8 @@
   ],
   "edges": [
     {
-      "source_id": "initializeyawlockstate",
-      "target_id": "configurecorrectionandyawslippolicy",
+      "source_id": "initialize_yaw_lock_state",
+      "target_id": "configure_correction_and_yaw_slip_policy",
       "output_name": "yaw_lock_state",
       "input_name": "state_in",
       "source_type": "YawLockState",
@@ -322,8 +322,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "initializeyawlockstate",
-      "target_id": "setrobotstandingstatus",
+      "source_id": "initialize_yaw_lock_state",
+      "target_id": "set_robot_standing_status",
       "output_name": "yaw_lock_state",
       "input_name": "state_in",
       "source_type": "YawLockState",
@@ -331,8 +331,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "setrobotstandingstatus",
-      "target_id": "readrobotstandingstatus",
+      "source_id": "set_robot_standing_status",
+      "target_id": "read_robot_standing_status",
       "output_name": "state_out",
       "input_name": "state_in",
       "source_type": "YawLockState",
@@ -340,8 +340,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "initializeyawlockstate",
-      "target_id": "setjointposeandinitialangles",
+      "source_id": "initialize_yaw_lock_state",
+      "target_id": "set_joint_pose_and_initial_angles",
       "output_name": "yaw_lock_state",
       "input_name": "state_in",
       "source_type": "YawLockState",
@@ -349,8 +349,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "setjointposeandinitialangles",
-      "target_id": "readinitialjointangles",
+      "source_id": "set_joint_pose_and_initial_angles",
+      "target_id": "read_initial_joint_angles",
       "output_name": "state_out",
       "input_name": "state_in",
       "source_type": "YawLockState",
@@ -358,8 +358,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "initializeyawlockstate",
-      "target_id": "setstandinglinktargets",
+      "source_id": "initialize_yaw_lock_state",
+      "target_id": "set_standing_link_targets",
       "output_name": "yaw_lock_state",
       "input_name": "state_in",
       "source_type": "YawLockState",

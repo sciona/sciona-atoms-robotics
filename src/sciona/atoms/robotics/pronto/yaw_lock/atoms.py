@@ -7,7 +7,15 @@ import numpy as np
 
 import icontract
 from sciona.ghost.registry import register_atom
-from .witnesses import witness_configurecorrectionandyawslippolicy, witness_initializeyawlockstate, witness_readinitialjointangles, witness_readrobotstandingstatus, witness_setjointposeandinitialangles, witness_setrobotstandingstatus, witness_setstandinglinktargets
+from .witnesses import (
+    witness_configure_correction_and_yaw_slip_policy,
+    witness_initialize_yaw_lock_state,
+    witness_read_initial_joint_angles,
+    witness_read_robot_standing_status,
+    witness_set_joint_pose_and_initial_angles,
+    witness_set_robot_standing_status,
+    witness_set_standing_link_targets,
+)
 import ctypes
 import ctypes.util
 from pathlib import Path
@@ -28,10 +36,10 @@ class YawLockState(TypedDict):
     left_standing_link: str | None
     right_standing_link: str | None
 
-@register_atom(witness_initializeyawlockstate)
+@register_atom(witness_initialize_yaw_lock_state)
 @icontract.require(lambda: True, "no preconditions for zero-parameter initializer")
 @icontract.ensure(lambda result: result is not None, "InitializeYawLockState output must not be None")
-def initializeyawlockstate() -> YawLockState:
+def initialize_yaw_lock_state() -> YawLockState:
     """Create the initial immutable YawLockState container for all persistent fields (parameters, standing flag, joint state, standing links).
 
 
@@ -51,14 +59,14 @@ def initializeyawlockstate() -> YawLockState:
         'right_standing_link': None,
     }
 
-@register_atom(witness_configurecorrectionandyawslippolicy)
+@register_atom(witness_configure_correction_and_yaw_slip_policy)
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.require(lambda correction_period_in: correction_period_in is not None, "correction_period_in cannot be None")
 @icontract.require(lambda yaw_slip_detect_in: yaw_slip_detect_in is not None, "yaw_slip_detect_in cannot be None")
 @icontract.require(lambda yaw_slip_threshold_degrees_in: yaw_slip_threshold_degrees_in is not None, "yaw_slip_threshold_degrees_in cannot be None")
 @icontract.require(lambda yaw_slip_disable_period_in: yaw_slip_disable_period_in is not None, "yaw_slip_disable_period_in cannot be None")
 @icontract.ensure(lambda result: result is not None, "ConfigureCorrectionAndYawSlipPolicy output must not be None")
-def configurecorrectionandyawslippolicy(state_in: YawLockState, correction_period_in: float, yaw_slip_detect_in: bool, yaw_slip_threshold_degrees_in: float, yaw_slip_disable_period_in: float) -> YawLockState:
+def configure_correction_and_yaw_slip_policy(state_in: YawLockState, correction_period_in: float, yaw_slip_detect_in: bool, yaw_slip_threshold_degrees_in: float, yaw_slip_disable_period_in: float) -> YawLockState:
     """Set correction cadence and yaw-slip detection policy by returning a new state with updated parameter fields.
 
     Args:
@@ -78,11 +86,11 @@ def configurecorrectionandyawslippolicy(state_in: YawLockState, correction_perio
     new_state['yaw_slip_disable_period'] = yaw_slip_disable_period_in
     return new_state
 
-@register_atom(witness_setrobotstandingstatus)
+@register_atom(witness_set_robot_standing_status)
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.require(lambda is_robot_standing_in: is_robot_standing_in is not None, "is_robot_standing_in cannot be None")
 @icontract.ensure(lambda result: result is not None, "SetRobotStandingStatus output must not be None")
-def setrobotstandingstatus(state_in: YawLockState, is_robot_standing_in: bool) -> YawLockState:
+def set_robot_standing_status(state_in: YawLockState, is_robot_standing_in: bool) -> YawLockState:
     """Write robot standing status by producing a new immutable state.
 
     Args:
@@ -96,10 +104,10 @@ def setrobotstandingstatus(state_in: YawLockState, is_robot_standing_in: bool) -
     new_state['is_robot_standing'] = is_robot_standing_in
     return new_state
 
-@register_atom(witness_readrobotstandingstatus)
+@register_atom(witness_read_robot_standing_status)
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.ensure(lambda result: result is not None, "ReadRobotStandingStatus output must not be None")
-def readrobotstandingstatus(state_in: YawLockState) -> bool:
+def read_robot_standing_status(state_in: YawLockState) -> bool:
     """Read current robot standing status from immutable state without mutation.
 
     Args:
@@ -110,13 +118,13 @@ def readrobotstandingstatus(state_in: YawLockState) -> bool:
     """
     return state_in['is_robot_standing']
 
-@register_atom(witness_setjointposeandinitialangles)
+@register_atom(witness_set_joint_pose_and_initial_angles)
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.require(lambda joint_name_in: joint_name_in is not None, "joint_name_in cannot be None")
 @icontract.require(lambda joint_position_in: joint_position_in is not None, "joint_position_in cannot be None")
 @icontract.require(lambda joint_angles_init_in: joint_angles_init_in is not None, "joint_angles_init_in cannot be None")
 @icontract.ensure(lambda result: result is not None, "SetJointPoseAndInitialAngles output must not be None")
-def setjointposeandinitialangles(
+def set_joint_pose_and_initial_angles(
     state_in: YawLockState,
     joint_name_in: JointNameInput,
     joint_position_in: JointValueInput,
@@ -139,10 +147,10 @@ def setjointposeandinitialangles(
     new_state['joint_angles_init'] = joint_angles_init_in
     return new_state
 
-@register_atom(witness_readinitialjointangles)
+@register_atom(witness_read_initial_joint_angles)
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.ensure(lambda result: result is not None, "ReadInitialJointAngles output must not be None")
-def readinitialjointangles(state_in: YawLockState) -> JointValueInput | None:
+def read_initial_joint_angles(state_in: YawLockState) -> JointValueInput | None:
     """Read stored initial joint angles from immutable state.
 
     Args:
@@ -153,12 +161,12 @@ def readinitialjointangles(state_in: YawLockState) -> JointValueInput | None:
     """
     return state_in['joint_angles_init']
 
-@register_atom(witness_setstandinglinktargets)
+@register_atom(witness_set_standing_link_targets)
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.require(lambda left_standing_link_in: left_standing_link_in is not None, "left_standing_link_in cannot be None")
 @icontract.require(lambda right_standing_link_in: right_standing_link_in is not None, "right_standing_link_in cannot be None")
 @icontract.ensure(lambda result: result is not None, "SetStandingLinkTargets output must not be None")
-def setstandinglinktargets(state_in: YawLockState, left_standing_link_in: str, right_standing_link_in: str) -> YawLockState:
+def set_standing_link_targets(state_in: YawLockState, left_standing_link_in: str, right_standing_link_in: str) -> YawLockState:
     """Set left/right standing link identifiers in a newly returned immutable state.
 
     Args:
@@ -184,7 +192,7 @@ import ctypes.util
 from pathlib import Path
 
 
-def _initializeyawlockstate_ffi() -> object:
+def _initialize_yaw_lock_state_ffi() -> object:
     """Wrapper that calls the C++ version of initialize yaw lock state. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./initializeyawlockstate.so")
     _func_name = "initializeyawlockstate"
@@ -192,7 +200,7 @@ def _initializeyawlockstate_ffi() -> object:
     _func.restype = ctypes.c_void_p
     return _func()
 
-def _configurecorrectionandyawslippolicy_ffi(state_in: object, correction_period_in: object, yaw_slip_detect_in: object, yaw_slip_threshold_degrees_in: object, yaw_slip_disable_period_in: object) -> object:
+def _configure_correction_and_yaw_slip_policy_ffi(state_in: object, correction_period_in: object, yaw_slip_detect_in: object, yaw_slip_threshold_degrees_in: object, yaw_slip_disable_period_in: object) -> object:
     """Wrapper that calls the C++ version of configure correction and yaw slip policy. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./configurecorrectionandyawslippolicy.so")
     _func_name = "configurecorrectionandyawslippolicy"
@@ -201,7 +209,7 @@ def _configurecorrectionandyawslippolicy_ffi(state_in: object, correction_period
     _func.restype = ctypes.c_void_p
     return _func(state_in, correction_period_in, yaw_slip_detect_in, yaw_slip_threshold_degrees_in, yaw_slip_disable_period_in)
 
-def _setrobotstandingstatus_ffi(state_in: object, is_robot_standing_in: object) -> object:
+def _set_robot_standing_status_ffi(state_in: object, is_robot_standing_in: object) -> object:
     """Wrapper that calls the C++ version of set robot standing status. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./setrobotstandingstatus.so")
     _func_name = "setrobotstandingstatus"
@@ -210,7 +218,7 @@ def _setrobotstandingstatus_ffi(state_in: object, is_robot_standing_in: object) 
     _func.restype = ctypes.c_void_p
     return _func(state_in, is_robot_standing_in)
 
-def _readrobotstandingstatus_ffi(state_in: object) -> object:
+def _read_robot_standing_status_ffi(state_in: object) -> object:
     """Wrapper that calls the C++ version of read robot standing status. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./readrobotstandingstatus.so")
     _func_name = "readrobotstandingstatus"
@@ -219,7 +227,7 @@ def _readrobotstandingstatus_ffi(state_in: object) -> object:
     _func.restype = ctypes.c_void_p
     return _func(state_in)
 
-def _setjointposeandinitialangles_ffi(state_in: object, joint_name_in: object, joint_position_in: object, joint_angles_init_in: object) -> object:
+def _set_joint_pose_and_initial_angles_ffi(state_in: object, joint_name_in: object, joint_position_in: object, joint_angles_init_in: object) -> object:
     """Wrapper that calls the C++ version of set joint pose and initial angles. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./setjointposeandinitialangles.so")
     _func_name = "setjointposeandinitialangles"
@@ -228,7 +236,7 @@ def _setjointposeandinitialangles_ffi(state_in: object, joint_name_in: object, j
     _func.restype = ctypes.c_void_p
     return _func(state_in, joint_name_in, joint_position_in, joint_angles_init_in)
 
-def _readinitialjointangles_ffi(state_in: object) -> object:
+def _read_initial_joint_angles_ffi(state_in: object) -> object:
     """Wrapper that calls the C++ version of read initial joint angles. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./readinitialjointangles.so")
     _func_name = "readinitialjointangles"
@@ -237,7 +245,7 @@ def _readinitialjointangles_ffi(state_in: object) -> object:
     _func.restype = ctypes.c_void_p
     return _func(state_in)
 
-def _setstandinglinktargets_ffi(state_in: object, left_standing_link_in: object, right_standing_link_in: object) -> object:
+def _set_standing_link_targets_ffi(state_in: object, left_standing_link_in: object, right_standing_link_in: object) -> object:
     """Wrapper that calls the C++ version of set standing link targets. Passes arguments through and returns the result."""
     _lib = ctypes.CDLL("./setstandinglinktargets.so")
     _func_name = "setstandinglinktargets"

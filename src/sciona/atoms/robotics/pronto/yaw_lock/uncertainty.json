@@ -1,0 +1,14 @@
+{
+  "atom": "set_robot_standing_status",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 1.0,
+      "confidence": 0.5,
+      "n_trials": 4,
+      "epsilon": 1.0,
+      "input_regime": "exhaustive discrete toggle analysis over boolean standing-status updates applied to initialized yaw-lock state",
+      "notes": "discrete transition harness over all standing-state input/output combinations; overwrite semantics are exact and deterministic with no stochastic variability"
+    }
+  ]
+}
