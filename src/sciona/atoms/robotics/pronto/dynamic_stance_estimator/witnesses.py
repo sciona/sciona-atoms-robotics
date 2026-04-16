@@ -3,7 +3,7 @@ from __future__ import annotations
 from sciona.ghost.abstract import AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal
 
 
-def witness_initializefilter(
+def witness_initialize_filter(
     family: object,
     event_shape: object,
 ) -> AbstractDistribution:
@@ -13,7 +13,7 @@ def witness_initializefilter(
         event_shape=event_shape,)
 
 
-def witness_predictstep(current_state: AbstractArray, model_params: AbstractArray, dt: AbstractArray) -> AbstractArray:
+def witness_predict_step(current_state: AbstractArray, model_params: AbstractArray, dt: AbstractArray) -> AbstractArray:
     """Shape-and-type check for predict step. Returns output metadata without running the real computation."""
     result = AbstractArray(
         shape=current_state.shape,
@@ -21,7 +21,7 @@ def witness_predictstep(current_state: AbstractArray, model_params: AbstractArra
 
     return result
 
-def witness_updatestep(prior: AbstractDistribution, likelihood: AbstractDistribution, data_shape: tuple[int, ...]) -> AbstractDistribution:
+def witness_update_step(prior: AbstractDistribution, likelihood: AbstractDistribution, data_shape: tuple[int, ...]) -> AbstractDistribution:
     """Shape-and-type check for posterior update: update step. Returns output metadata without running the real computation."""
     prior.assert_conjugate_to(likelihood)
     return AbstractDistribution(
@@ -33,7 +33,7 @@ def witness_updatestep(prior: AbstractDistribution, likelihood: AbstractDistribu
         is_discrete=prior.is_discrete,
     )
 
-def witness_querystance(current_state: AbstractArray) -> AbstractArray:
+def witness_query_stance(current_state: AbstractArray) -> AbstractArray:
     """Shape-and-type check for query stance. Returns output metadata without running the real computation."""
     result = AbstractArray(
         shape=current_state.shape,

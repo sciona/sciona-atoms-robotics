@@ -14,7 +14,7 @@
     "src/sciona/atoms/robotics/pronto/**/uncertainty.json"
   ],
   "limitations": [
-    "The family bundle spans mixed subfamilies; follow-up uncertainty work is still needed for backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, and leg_odometer, but ready_for_manifest_merge rows in completed subfamilies should not be blocked by that debt."
+    "The family bundle spans mixed subfamilies; follow-up uncertainty work is still needed for backlash_filter, dynamic_stance_estimator_d12, and leg_odometer, but ready_for_manifest_merge rows in completed subfamilies should not be blocked by that debt."
   ],
   "required_actions": [],
   "subfamily_summaries": [
@@ -37,7 +37,7 @@
       "row_count": 4,
       "has_cdg": true,
       "has_matches": true,
-      "has_uncertainty": false
+      "has_uncertainty": true
     },
     {
       "subfamily": "dynamic_stance_estimator_d12",
@@ -223,19 +223,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[7]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initializefilter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initialize_filter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for dynamic_stance_estimator."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for dynamic_stance_estimator."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
@@ -244,19 +240,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[8]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predictstep@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predict_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for dynamic_stance_estimator."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for dynamic_stance_estimator."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
@@ -265,19 +257,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[9]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.querystance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.query_stance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for dynamic_stance_estimator."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for dynamic_stance_estimator."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
@@ -286,19 +274,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[10]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.updatestep@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.update_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for dynamic_stance_estimator."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for dynamic_stance_estimator."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
         "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",

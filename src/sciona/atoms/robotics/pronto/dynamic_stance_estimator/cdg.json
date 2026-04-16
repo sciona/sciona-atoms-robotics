@@ -10,10 +10,10 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "initializefilter",
-        "predictstep",
-        "updatestep",
-        "querystance"
+        "initialize_filter",
+        "predict_step",
+        "update_step",
+        "query_stance"
       ],
       "depth": 0,
       "type_signature": "",
@@ -27,7 +27,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "initializefilter",
+      "node_id": "initialize_filter",
       "parent_id": "DynamicStanceEstimator_root",
       "name": "InitializeFilter",
       "description": "Initializes the state-space model with prior state, covariance, and static model parameters.",
@@ -90,7 +90,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "predictstep",
+      "node_id": "predict_step",
       "parent_id": "DynamicStanceEstimator_root",
       "name": "PredictStep",
       "description": "Predicts the next state and covariance based on the state transition model (prediction step of Kalman filter).",
@@ -133,7 +133,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "updatestep",
+      "node_id": "update_step",
       "parent_id": "DynamicStanceEstimator_root",
       "name": "UpdateStep",
       "description": "Updates the state and covariance based on a new measurement (update step of Kalman filter).",
@@ -176,7 +176,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "querystance",
+      "node_id": "query_stance",
       "parent_id": "DynamicStanceEstimator_root",
       "name": "QueryStance",
       "description": "Extracts the stance (position) from the state vector.",
@@ -211,8 +211,8 @@
   ],
   "edges": [
     {
-      "source_id": "initializefilter",
-      "target_id": "predictstep",
+      "source_id": "initialize_filter",
+      "target_id": "predict_step",
       "output_name": "initial_state",
       "input_name": "current_state",
       "source_type": "StateModelSpec",
@@ -220,8 +220,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "initializefilter",
-      "target_id": "predictstep",
+      "source_id": "initialize_filter",
+      "target_id": "predict_step",
       "output_name": "model_params",
       "input_name": "model_params",
       "source_type": "ModelParamsSpec",
@@ -229,8 +229,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "initializefilter",
-      "target_id": "updatestep",
+      "source_id": "initialize_filter",
+      "target_id": "update_step",
       "output_name": "model_params",
       "input_name": "model_params",
       "source_type": "ModelParamsSpec",
@@ -238,8 +238,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "updatestep",
-      "target_id": "predictstep",
+      "source_id": "update_step",
+      "target_id": "predict_step",
       "output_name": "updated_state",
       "input_name": "current_state",
       "source_type": "StateModelSpec",
@@ -247,8 +247,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "updatestep",
-      "target_id": "querystance",
+      "source_id": "update_step",
+      "target_id": "query_stance",
       "output_name": "updated_state",
       "input_name": "current_state",
       "source_type": "StateModelSpec",
