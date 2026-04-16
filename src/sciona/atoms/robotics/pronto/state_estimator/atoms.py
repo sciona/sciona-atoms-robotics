@@ -1,9 +1,11 @@
 from __future__ import annotations
 
-import numpy as np
 import icontract
+import numpy as np
+
 from sciona.ghost.registry import register_atom
-from .state_estimator_witnesses import witness_update_state_estimate
+
+from .witnesses import witness_update_state_estimate
 
 
 @register_atom(witness_update_state_estimate)
@@ -19,30 +21,20 @@ from .state_estimator_witnesses import witness_update_state_estimate
 @icontract.require(lambda utime: utime is not None, "utime cannot be None")
 @icontract.ensure(lambda result: isinstance(result, np.ndarray), "result must be np.ndarray")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
-def update_state_estimate(prior_state: np.ndarray, prior_cov: np.ndarray, measurement: np.ndarray, utime: int) -> np.ndarray:
-    """Fuses an incoming sensor measurement into the robot_primes Rigid Body Inertial State (RBIS) estimate using an EKF-style update.
+def update_state_estimate(
+    prior_state: np.ndarray,
+    prior_cov: np.ndarray,
+    measurement: np.ndarray,
+    utime: int,
+) -> np.ndarray:
+    """Fuse a measurement into the RBIS state using an EKF-style linear update."""
 
-    Args:
-        prior_state: Prior rigid-body state vector (position, orientation, velocity), shape (n_state,)
-        prior_cov: Prior covariance matrix, shape (n_state, n_state)
-        measurement: Incoming sensor measurement vector, shape (n_meas,)
-        utime: Timestamp of the incoming measurement in microseconds
-
-    Returns:
-        Updated state vector after fusing the measurement, shape (n_state,)
-    """
-    # EKF update: fuse measurement into prior state estimate
-    # Use identity measurement model H = I (measurement directly observes state)
+    _ = utime
     n_state = prior_state.shape[0]
     n_meas = measurement.shape[0]
     H = np.eye(n_meas, n_state, dtype=np.float64)
-    R = np.eye(n_meas, dtype=np.float64) * 1e-2  # measurement noise
-    # Innovation
+    R = np.eye(n_meas, dtype=np.float64) * 1e-2
     innovation = measurement - H @ prior_state
-    # Innovation covariance
     S = H @ prior_cov @ H.T + R
-    # Kalman gain
     K = prior_cov @ H.T @ np.linalg.inv(S)
-    # Updated state
-    x_post = prior_state + K @ innovation
-    return x_post
+    return prior_state + K @ innovation

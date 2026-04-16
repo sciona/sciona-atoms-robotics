@@ -68,6 +68,13 @@
       "has_uncertainty": true
     },
     {
+      "subfamily": "state_estimator",
+      "row_count": 1,
+      "has_cdg": true,
+      "has_matches": false,
+      "has_uncertainty": true
+    },
+    {
       "subfamily": "yaw_lock",
       "row_count": 7,
       "has_cdg": true,
@@ -522,6 +529,23 @@
         "src/sciona/atoms/robotics/pronto/inverse_schmitt/uncertainty.json"
       ],
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[25]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.state_estimator.update_state_estimate@sciona/atoms/robotics/pronto/state_estimator/atoms.py:10",
+      "subfamily": "state_estimator",
+      "source_path": "sciona/atoms/robotics/pronto/state_estimator/atoms.py:10",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/state_estimator/references.json",
+        "src/sciona/atoms/robotics/pronto/state_estimator/cdg.json",
+        "src/sciona/atoms/robotics/pronto/state_estimator/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[26]"
     }
   ]
 }

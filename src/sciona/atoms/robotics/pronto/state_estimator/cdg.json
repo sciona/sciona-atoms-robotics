@@ -20,14 +20,14 @@
       "is_external": false,
       "parallelizable": false,
       "conceptual_summary": "Grouped atoms sharing an upstream family or module.",
-      "critic_notes": "Auto-generated module CDG for consolidation.",
-      "decomposition_rationale": "Replaces singleton atom subpackages with a flat module layout."
+      "critic_notes": "Converted from a flat pronto module so metadata backfills resolve the family namespace correctly.",
+      "decomposition_rationale": "Package-shaped family layout for a singleton atom."
     },
     {
       "node_id": "update_state_estimate",
       "parent_id": "state_estimator_root",
       "name": "update_state_estimate",
-      "description": "Fuses an incoming sensor measurement into the robot_primes Rigid Body Inertial State (RBIS) estimate using an EKF-style update.",
+      "description": "Fuse a measurement into the RBIS state using an EKF-style linear update.",
       "concept_type": "custom",
       "inputs": [
         {
@@ -67,7 +67,7 @@
       "is_opaque": false,
       "is_external": false,
       "parallelizable": false,
-      "conceptual_summary": "Direct callable atom in the consolidated module.",
+      "conceptual_summary": "Linear measurement-update step that fuses a measurement into the prior state with a Kalman-style gain computed from the covariance and fixed measurement noise.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
       "decomposition_rationale": "Leaf atom."
     }

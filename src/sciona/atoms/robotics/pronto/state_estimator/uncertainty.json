@@ -1,0 +1,14 @@
+{
+  "atom": "update_state_estimate",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 0.9900990099009901,
+      "confidence": 0.6,
+      "n_trials": 4,
+      "epsilon": 0.0001,
+      "input_regime": "identity measurement model with isotropic prior covariance and low fixed measurement noise",
+      "notes": "Closed-form Kalman gain checks on low-dimensional cases show the implementation follows the expected linear update exactly under the package's fixed R = 1e-2 identity noise model."
+    }
+  ]
+}
