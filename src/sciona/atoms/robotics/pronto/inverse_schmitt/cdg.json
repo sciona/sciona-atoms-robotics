@@ -20,14 +20,14 @@
       "is_external": false,
       "parallelizable": false,
       "conceptual_summary": "Grouped atoms sharing an upstream family or module.",
-      "critic_notes": "Auto-generated module CDG for consolidation.",
-      "decomposition_rationale": "Replaces singleton atom subpackages with a flat module layout."
+      "critic_notes": "Converted from a flat pronto module so metadata backfills resolve the family namespace correctly.",
+      "decomposition_rationale": "Package-shaped family layout for a singleton atom."
     },
     {
       "node_id": "inverse_schmitt_trigger_transform",
       "parent_id": "inverse_schmitt_root",
       "name": "inverse_schmitt_trigger_transform",
-      "description": "Entry-point pure transform for inverse Schmitt trigger behavior. No sub-methods, mutable attributes, or config-gated branches were provided, so this is modeled as a single stateless atom.",
+      "description": "Apply an inverse Schmitt trigger with hysteresis to a 1D signal.",
       "concept_type": "custom",
       "inputs": [
         {
@@ -52,7 +52,7 @@
       "is_opaque": false,
       "is_external": false,
       "parallelizable": false,
-      "conceptual_summary": "Direct callable atom in the consolidated module.",
+      "conceptual_summary": "Stateless hysteresis threshold transform with a preserved prior-state region between low and high thresholds.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
       "decomposition_rationale": "Leaf atom."
     }
