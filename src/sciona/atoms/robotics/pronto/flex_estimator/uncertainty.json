@@ -1,0 +1,14 @@
+{
+  "atom": "estimate_flex_deflection",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 0.001,
+      "confidence": 0.6,
+      "n_trials": 4,
+      "epsilon": 1e-06,
+      "input_regime": "stance-mask toggles with signed hip efforts under the fixed compliance coefficient",
+      "notes": "The transform is deterministic and piecewise linear: swing-leg outputs are exactly zero and stance-leg outputs scale linearly with hip effort by the fixed compliance constant."
+    }
+  ]
+}

@@ -1,16 +1,11 @@
 from __future__ import annotations
 
-from typing import Any
-Boolean: Any = Any
-
-"""Auto-generated atom wrappers following the sciona pattern."""
-
-
 import numpy as np
 import icontract
+
 from sciona.ghost.registry import register_atom
-from .flex_estimator_witnesses import witness_estimate_flex_deflection
-# Boolean already defined as type alias above
+
+from .witnesses import witness_estimate_flex_deflection
 
 
 @register_atom(witness_estimate_flex_deflection)
@@ -25,23 +20,17 @@ from .flex_estimator_witnesses import witness_estimate_flex_deflection
 @icontract.require(lambda stance_mask: isinstance(stance_mask, np.ndarray), "stance_mask must be np.ndarray")
 @icontract.ensure(lambda result: isinstance(result, np.ndarray), "result must be np.ndarray")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
-def estimate_flex_deflection(hip_positions: np.ndarray, hip_efforts: np.ndarray, stance_mask: np.ndarray) -> np.ndarray:
-    """Estimates hip flexure deflection for a quadruped robot using kinematic state and joint effort to correct leg odometry.
+def estimate_flex_deflection(
+    hip_positions: np.ndarray,
+    hip_efforts: np.ndarray,
+    stance_mask: np.ndarray,
+) -> np.ndarray:
+    """Estimate per-leg flex deflection from hip effort on stance legs."""
 
-    Args:
-        hip_positions: Hip joint positions for each leg, shape (4, 3)
-        hip_efforts: Measured joint torques/efforts at each hip, shape (4,)
-        stance_mask: Boolean stance state for each leg, shape (4,)
-
-    Returns:
-        Estimated flex deflection vector per leg, shape (4,)
-    """
-    # Estimate flex deflection using joint effort and stance mask
-    # For stance legs, deflection is proportional to torque (compliance model)
-    # For swing legs, deflection is zero
-    compliance = 1e-3  # rad/Nm compliance constant
+    _ = hip_positions
+    compliance = 1e-3
     deflection = np.zeros(hip_efforts.shape[0], dtype=np.float64)
-    for i in range(hip_efforts.shape[0]):
-        if stance_mask[i]:
-            deflection[i] = compliance * hip_efforts[i]
+    for index in range(hip_efforts.shape[0]):
+        if stance_mask[index]:
+            deflection[index] = compliance * hip_efforts[index]
     return deflection

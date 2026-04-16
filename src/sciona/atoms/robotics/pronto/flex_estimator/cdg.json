@@ -20,14 +20,14 @@
       "is_external": false,
       "parallelizable": false,
       "conceptual_summary": "Grouped atoms sharing an upstream family or module.",
-      "critic_notes": "Auto-generated module CDG for consolidation.",
-      "decomposition_rationale": "Replaces singleton atom subpackages with a flat module layout."
+      "critic_notes": "Converted from a flat pronto module so metadata backfills resolve the family namespace correctly.",
+      "decomposition_rationale": "Package-shaped family layout for a singleton atom."
     },
     {
       "node_id": "estimate_flex_deflection",
       "parent_id": "flex_estimator_root",
       "name": "estimate_flex_deflection",
-      "description": "Estimates hip flexure deflection for a quadruped robot using kinematic state and joint effort to correct leg odometry.",
+      "description": "Estimate per-leg flex deflection from hip effort on stance legs.",
       "concept_type": "custom",
       "inputs": [
         {
@@ -62,7 +62,7 @@
       "is_opaque": false,
       "is_external": false,
       "parallelizable": false,
-      "conceptual_summary": "Direct callable atom in the consolidated module.",
+      "conceptual_summary": "Compliance-model transform that maps hip efforts on stance legs to a per-leg flex deflection vector and zeros out swing legs.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
       "decomposition_rationale": "Leaf atom."
     }
