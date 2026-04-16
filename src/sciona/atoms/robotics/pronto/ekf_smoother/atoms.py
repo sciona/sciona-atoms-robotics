@@ -9,7 +9,7 @@ import numpy as np
 
 from sciona.ghost.registry import register_atom
 
-from .ekf_smoother_witnesses import witness_stateestimatorinit
+from .witnesses import witness_initialize_state_estimator_state
 
 
 class StateEstimatorState(TypedDict):
@@ -25,16 +25,12 @@ class StateEstimatorState(TypedDict):
     P_pred_history: list[np.ndarray]
 
 
-@register_atom(witness_stateestimatorinit)
+@register_atom(witness_initialize_state_estimator_state)
 @icontract.require(lambda: True, "no preconditions for zero-parameter initializer")
-@icontract.ensure(lambda result: result is not None, "StateEstimatorInit output must not be None")
-def stateestimatorinit() -> StateEstimatorState:
-    """Bootstraps a default EKF smoother state estimate bundle.
+@icontract.ensure(lambda result: result is not None, "initialize_state_estimator_state output must not be None")
+def initialize_state_estimator_state() -> StateEstimatorState:
+    """Bootstrap a default EKF smoother state estimate bundle."""
 
-    Returns:
-        Initialized filter state with finite state vectors and positive
-        semi-definite covariance and noise matrices.
-    """
     n = 6
     dt = 0.01
 
@@ -62,7 +58,7 @@ def stateestimatorinit() -> StateEstimatorState:
     }
 
 
-def _stateestimatorinit_ffi() -> ctypes.c_void_p:
+def _initialize_state_estimator_state_ffi() -> ctypes.c_void_p:
     lib_path = Path(__file__).with_name("stateestimatorinit.so")
     _lib = ctypes.CDLL(str(lib_path))
     _func = _lib["stateestimatorinit_prime"]

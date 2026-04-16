@@ -47,6 +47,13 @@
       "has_uncertainty": false
     },
     {
+      "subfamily": "ekf_smoother",
+      "row_count": 1,
+      "has_cdg": true,
+      "has_matches": false,
+      "has_uncertainty": true
+    },
+    {
       "subfamily": "flex_estimator",
       "row_count": 1,
       "has_cdg": true,
@@ -553,6 +560,23 @@
         "src/sciona/atoms/robotics/pronto/state_estimator/uncertainty.json"
       ],
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[26]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.ekf_smoother.initialize_state_estimator_state@sciona/atoms/robotics/pronto/ekf_smoother/atoms.py:24",
+      "subfamily": "ekf_smoother",
+      "source_path": "sciona/atoms/robotics/pronto/ekf_smoother/atoms.py:24",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/ekf_smoother/references.json",
+        "src/sciona/atoms/robotics/pronto/ekf_smoother/cdg.json",
+        "src/sciona/atoms/robotics/pronto/ekf_smoother/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[14]"
     },
     {
       "atom_fqdn": "sciona.atoms.robotics.pronto.flex_estimator.estimate_flex_deflection@sciona/atoms/robotics/pronto/flex_estimator/atoms.py:10",

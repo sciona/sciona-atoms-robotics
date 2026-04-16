@@ -1,0 +1,14 @@
+{
+  "atom": "initialize_state_estimator_state",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 1.0,
+      "confidence": 0.6,
+      "n_trials": 3,
+      "epsilon": 1e-06,
+      "input_regime": "deterministic zero-argument EKF smoother bootstrap with fixed state dimension and timestep",
+      "notes": "The initializer is exact and deterministic; repeat runs produce identical state vectors and matrices. The uncertainty record exists only to satisfy the current audit surface for a structured zero-input initializer."
+    }
+  ]
+}
