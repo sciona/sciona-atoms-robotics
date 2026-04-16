@@ -11,17 +11,17 @@ from pathlib import Path
 import numpy as np
 import icontract
 from sciona.ghost.registry import register_atom
-from .witnesses import witness_stanceestimation, witness_stancestateinit
+from .witnesses import witness_stance_estimation, witness_stance_state_init
 
 
 # Domain-specific type alias for the stance estimator state container
 StanceState = dict[str, np.ndarray]
 
 
-@register_atom(witness_stancestateinit)  # type: ignore[untyped-decorator]
+@register_atom(witness_stance_state_init)  # type: ignore[untyped-decorator]
 @icontract.require(lambda config: config is not None, "config cannot be None")
 @icontract.ensure(lambda result: result is not None, "StanceStateInit output must not be None")
-def stancestateinit(config: dict[str, float]) -> StanceState:
+def stance_state_init(config: dict[str, float]) -> StanceState:
     """Bootstraps the internal state containers for the dynamic stance estimator - allocates covariance matrices (P, Q, R), latent mean/variance buffers, and any persistent bookkeeping needed before the first estimation step.
 
     Args:
@@ -40,10 +40,10 @@ def stancestateinit(config: dict[str, float]) -> StanceState:
     }
 
 
-@register_atom(witness_stanceestimation)  # type: ignore[untyped-decorator]
+@register_atom(witness_stance_estimation)  # type: ignore[untyped-decorator]
 @icontract.require(lambda observation: observation is not None, "observation cannot be None")
 @icontract.ensure(lambda result: all(r is not None for r in result), "StanceEstimation all outputs must not be None")
-def stanceestimation(stance_state: StanceState, observation: np.ndarray) -> tuple[StanceState, np.ndarray]:
+def stance_estimation(stance_state: StanceState, observation: np.ndarray) -> tuple[StanceState, np.ndarray]:
     """Core dynamic-stance estimation pass: consumes the current stance state and a new observation vector, runs the estimation kernel (predict + update), and returns an updated immutable stance state together with the estimated stance output.
 
     Args:

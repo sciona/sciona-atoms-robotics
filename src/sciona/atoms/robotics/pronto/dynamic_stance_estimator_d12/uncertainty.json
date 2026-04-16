@@ -1,0 +1,14 @@
+{
+  "atom": "stance_estimation",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 333.8487862642895,
+      "confidence": 0.6,
+      "n_trials": 500,
+      "epsilon": 0.001,
+      "input_regime": "measurement perturbation around a threshold-crossing 4-leg stance estimate with force_threshold=50.0 and one channel exactly at the decision boundary",
+      "notes": "local perturbation harness on the D12 stance-estimation thresholding update; reported scalar factor is the median output-to-input norm ratio under small Gaussian observation perturbations near the discontinuity"
+    }
+  ]
+}

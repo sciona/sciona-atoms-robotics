@@ -10,8 +10,8 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "stancestateinit",
-        "stanceestimation"
+        "stance_state_init",
+        "stance_estimation"
       ],
       "depth": 0,
       "type_signature": "",
@@ -27,7 +27,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "stancestateinit",
+      "node_id": "stance_state_init",
       "parent_id": "DynamicStanceEstimator_root",
       "name": "StanceStateInit",
       "description": "Bootstraps the internal state containers for the dynamic stance estimator \u2014 allocates covariance matrices (P, Q, R), latent mean/variance buffers, and any persistent bookkeeping needed before the first estimation step.",
@@ -66,7 +66,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "stanceestimation",
+      "node_id": "stance_estimation",
       "parent_id": "DynamicStanceEstimator_root",
       "name": "StanceEstimation",
       "description": "Core dynamic-stance estimation pass: consumes the current stance state and a new observation vector, runs the estimation kernel (predict + update), and returns an updated immutable stance state together with the estimated stance output.",
@@ -121,8 +121,8 @@
   ],
   "edges": [
     {
-      "source_id": "stancestateinit",
-      "target_id": "stanceestimation",
+      "source_id": "stance_state_init",
+      "target_id": "stance_estimation",
       "output_name": "stance_state",
       "input_name": "stance_state",
       "source_type": "StanceState",
