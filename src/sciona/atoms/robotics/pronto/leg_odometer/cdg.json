@@ -10,8 +10,8 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "velocitystatereadout",
-        "posequeryaccessors"
+        "velocity_state_readout",
+        "pose_query_accessors"
       ],
       "depth": 0,
       "type_signature": "",
@@ -25,7 +25,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "velocitystatereadout",
+      "node_id": "velocity_state_readout",
       "parent_id": "LegOdometer_root",
       "name": "VelocityStateReadout",
       "description": "Reads immutable velocity state-space components (body-frame velocity and its covariance) and returns the current velocity estimate.",
@@ -63,7 +63,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "posequeryaccessors",
+      "node_id": "pose_query_accessors",
       "parent_id": "LegOdometer_root",
       "name": "PoseQueryAccessors",
       "description": "Provides stateless pose-related query endpoints and no-op/placeholder call sites with no declared state reads or writes.",

@@ -359,19 +359,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[15]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.leg_odometer.posequeryaccessors@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:42",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.leg_odometer.pose_query_accessors@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:49",
       "subfamily": "leg_odometer",
-      "source_path": "sciona/atoms/robotics/pronto/leg_odometer/atoms.py:42",
+      "source_path": "sciona/atoms/robotics/pronto/leg_odometer/atoms.py:49",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for leg_odometer."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for leg_odometer."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/leg_odometer/references.json",
         "src/sciona/atoms/robotics/pronto/leg_odometer/cdg.json",
@@ -380,19 +376,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[16]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.leg_odometer.velocitystatereadout@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:21",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.leg_odometer.velocity_state_readout@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:28",
       "subfamily": "leg_odometer",
-      "source_path": "sciona/atoms/robotics/pronto/leg_odometer/atoms.py:21",
+      "source_path": "sciona/atoms/robotics/pronto/leg_odometer/atoms.py:28",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for leg_odometer."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for leg_odometer."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/leg_odometer/references.json",
         "src/sciona/atoms/robotics/pronto/leg_odometer/cdg.json",

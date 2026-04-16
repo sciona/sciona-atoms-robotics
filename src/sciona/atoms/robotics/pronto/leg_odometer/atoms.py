@@ -8,7 +8,7 @@ import numpy as np
 
 import icontract
 from sciona.ghost.registry import register_atom
-from .witnesses import witness_posequeryaccessors, witness_velocitystatereadout
+from .witnesses import witness_pose_query_accessors, witness_velocity_state_readout
 
 import ctypes
 import ctypes.util
@@ -22,10 +22,10 @@ class _VelocityStateLike(Protocol):
 
 # Witness functions should be imported from the generated witnesses module
 
-@register_atom(witness_velocitystatereadout)  # type: ignore[untyped-decorator,name-defined]
+@register_atom(witness_velocity_state_readout)  # type: ignore[untyped-decorator,name-defined]
 @icontract.require(lambda state_in: state_in is not None, "state_in cannot be None")
 @icontract.ensure(lambda result: all(r is not None for r in result), "VelocityStateReadout all outputs must not be None")
-def velocitystatereadout(state_in: Mapping[str, np.ndarray] | _VelocityStateLike) -> tuple[np.ndarray, np.ndarray]:
+def velocity_state_readout(state_in: Mapping[str, np.ndarray] | _VelocityStateLike) -> tuple[np.ndarray, np.ndarray]:
     """Reads immutable velocity state-space components (body-frame velocity and its covariance) and returns the current velocity estimate.
 
     Args:
@@ -43,10 +43,10 @@ def velocitystatereadout(state_in: Mapping[str, np.ndarray] | _VelocityStateLike
         velocity_covariance = getattr(state_in, 'vel_cov', np.eye(3))
     return (np.asarray(velocity, dtype=np.float64), np.asarray(velocity_covariance, dtype=np.float64))
 
-@register_atom(witness_posequeryaccessors)  # type: ignore[untyped-decorator,name-defined]
+@register_atom(witness_pose_query_accessors)  # type: ignore[untyped-decorator,name-defined]
 @icontract.require(lambda: True, "no preconditions for zero-parameter initializer")
 @icontract.ensure(lambda result: result is not None, "PoseQueryAccessors output must not be None")
-def posequeryaccessors() -> dict[str, np.ndarray]:
+def pose_query_accessors() -> dict[str, np.ndarray]:
     """Provides stateless pose-related query endpoints and no-op/placeholder call sites with no declared state reads or writes.
 
     Returns:

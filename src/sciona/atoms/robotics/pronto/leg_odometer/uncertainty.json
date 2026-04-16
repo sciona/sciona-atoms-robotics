@@ -1,0 +1,14 @@
+{
+  "atom": "velocity_state_readout",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 0.9999997051418945,
+      "confidence": 0.6,
+      "n_trials": 500,
+      "epsilon": 1e-06,
+      "input_regime": "small perturbations of a representative 3D body-frame velocity vector and 3x3 covariance matrix",
+      "notes": "local perturbation harness on the immutable velocity-state readout; scalar factor is the median output-to-input norm ratio over concatenated velocity and covariance outputs"
+    }
+  ]
+}
