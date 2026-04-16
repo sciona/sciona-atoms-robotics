@@ -70,19 +70,15 @@
   ],
   "rows": [
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.initializebacklashfilterstate@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:23",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.initialize_backlash_filter_state@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:37",
       "subfamily": "backlash_filter",
-      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:23",
+      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:37",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for backlash_filter."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for backlash_filter."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/backlash_filter/references.json",
         "src/sciona/atoms/robotics/pronto/backlash_filter/cdg.json",
@@ -91,19 +87,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[0]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.updatealphaparameter@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:38",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.update_alpha_parameter@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:52",
       "subfamily": "backlash_filter",
-      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:38",
+      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:52",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for backlash_filter."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for backlash_filter."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/backlash_filter/references.json",
         "src/sciona/atoms/robotics/pronto/backlash_filter/cdg.json",
@@ -112,19 +104,15 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[1]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.updatecrossingtimemaximum@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:56",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.update_crossing_time_maximum@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:70",
       "subfamily": "backlash_filter",
-      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:56",
+      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:70",
       "review_status": "reviewed",
       "semantic_verdict": "publishable_candidate",
-      "developer_semantic_verdict": "source_aligned_with_gap",
-      "trust_readiness": "blocked_on_uncertainty_backfill",
-      "limitations": [
-        "No uncertainty.json present for backlash_filter."
-      ],
-      "required_actions": [
-        "Backfill uncertainty evidence for backlash_filter."
-      ],
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
       "authoritative_sources": [
         "src/sciona/atoms/robotics/pronto/backlash_filter/references.json",
         "src/sciona/atoms/robotics/pronto/backlash_filter/cdg.json",

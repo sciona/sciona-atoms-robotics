@@ -8,9 +8,9 @@ from numpy.typing import NDArray
 import icontract
 from sciona.ghost.registry import register_atom
 from .witnesses import (
-    witness_initializebacklashfilterstate,
-    witness_updatealphaparameter,
-    witness_updatecrossingtimemaximum,
+    witness_initialize_backlash_filter_state,
+    witness_update_alpha_parameter,
+    witness_update_crossing_time_maximum,
 )
 
 BacklashFilterState = NDArray[np.float64]
@@ -31,10 +31,10 @@ def _is_finite_scalar(value: object) -> bool:
 
 # Witness functions should be imported from the generated witnesses module
 
-@register_atom(witness_initializebacklashfilterstate)
+@register_atom(witness_initialize_backlash_filter_state)
 @icontract.require(lambda: True, "no preconditions for zero-parameter initializer")
 @icontract.ensure(lambda result: result is not None, "InitializeBacklashFilterState output must not be None")
-def initializebacklashfilterstate() -> BacklashFilterState:
+def initialize_backlash_filter_state() -> BacklashFilterState:
     """Create the initial immutable state object for the filter parameters.
 
     Initialized with constructor/default values.
@@ -45,11 +45,11 @@ def initializebacklashfilterstate() -> BacklashFilterState:
     # State layout: [alpha_, t_crossing_max_, last_output_, last_crossing_time_]
     return _DEFAULT_STATE.copy()
 
-@register_atom(witness_updatealphaparameter)
+@register_atom(witness_update_alpha_parameter)
 @icontract.ensure(lambda result: _is_backlash_filter_state(result), "updated state must preserve the local backlash filter state layout")
 @icontract.require(lambda state_in: _is_backlash_filter_state(state_in), "state_in must be a finite 1D backlash filter state with four entries")
 @icontract.require(lambda alpha_in: _is_finite_scalar(alpha_in), "alpha_in must be a finite numeric scalar")
-def updatealphaparameter(state_in: BacklashFilterState, alpha_in: float) -> BacklashFilterState:
+def update_alpha_parameter(state_in: BacklashFilterState, alpha_in: float) -> BacklashFilterState:
     """Produce a new filter state with an updated alpha parameter.
 
     Args:
@@ -63,11 +63,11 @@ def updatealphaparameter(state_in: BacklashFilterState, alpha_in: float) -> Back
     out[0] = float(alpha_in)
     return out
 
-@register_atom(witness_updatecrossingtimemaximum)
+@register_atom(witness_update_crossing_time_maximum)
 @icontract.ensure(lambda result: _is_backlash_filter_state(result), "updated state must preserve the local backlash filter state layout")
 @icontract.require(lambda state_in: _is_backlash_filter_state(state_in), "state_in must be a finite 1D backlash filter state with four entries")
 @icontract.require(lambda t_crossing_max_in: _is_finite_scalar(t_crossing_max_in), "t_crossing_max_in must be a finite numeric scalar")
-def updatecrossingtimemaximum(state_in: BacklashFilterState, t_crossing_max_in: float) -> BacklashFilterState:
+def update_crossing_time_maximum(state_in: BacklashFilterState, t_crossing_max_in: float) -> BacklashFilterState:
     """Produce a new filter state with an updated maximum crossing time.
 
     Args:

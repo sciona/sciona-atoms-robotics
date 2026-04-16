@@ -10,9 +10,9 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "initializebacklashfilterstate",
-        "updatealphaparameter",
-        "updatecrossingtimemaximum"
+        "initialize_backlash_filter_state",
+        "update_alpha_parameter",
+        "update_crossing_time_maximum"
       ],
       "depth": 0,
       "type_signature": "",
@@ -26,7 +26,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "initializebacklashfilterstate",
+      "node_id": "initialize_backlash_filter_state",
       "parent_id": "BacklashFilter_root",
       "name": "InitializeBacklashFilterState",
       "description": "Create the initial immutable state object for the filter parameters.",
@@ -59,7 +59,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "updatealphaparameter",
+      "node_id": "update_alpha_parameter",
       "parent_id": "BacklashFilter_root",
       "name": "UpdateAlphaParameter",
       "description": "Produce a new filter state with an updated alpha parameter.",
@@ -97,7 +97,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "updatecrossingtimemaximum",
+      "node_id": "update_crossing_time_maximum",
       "parent_id": "BacklashFilter_root",
       "name": "UpdateCrossingTimeMaximum",
       "description": "Produce a new filter state with an updated maximum crossing time.",
@@ -137,8 +137,8 @@
   ],
   "edges": [
     {
-      "source_id": "initializebacklashfilterstate",
-      "target_id": "updatealphaparameter",
+      "source_id": "initialize_backlash_filter_state",
+      "target_id": "update_alpha_parameter",
       "output_name": "state_out",
       "input_name": "state_in",
       "source_type": "BacklashFilterState",
@@ -146,8 +146,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "updatealphaparameter",
-      "target_id": "updatecrossingtimemaximum",
+      "source_id": "update_alpha_parameter",
+      "target_id": "update_crossing_time_maximum",
       "output_name": "state_out",
       "input_name": "state_in",
       "source_type": "BacklashFilterState",
