@@ -1,0 +1,585 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "robotics.pronto.family_batch.review.v1",
+  "provider_repo": "sciona-atoms-robotics",
+  "family": "robotics.pronto",
+  "review_status": "partial",
+  "semantic_verdict": "publishable_candidate_with_gaps",
+  "developer_semantic_verdict": "source_aligned_with_partial_evidence",
+  "trust_readiness": "blocked_on_uncertainty_backfill",
+  "authoritative_sources": [
+    "src/sciona/atoms/robotics/pronto/**/references.json",
+    "src/sciona/atoms/robotics/pronto/**/cdg.json",
+    "src/sciona/atoms/robotics/pronto/**/matches.json",
+    "src/sciona/atoms/robotics/pronto/**/uncertainty.json"
+  ],
+  "limitations": [
+    "Some subfamilies still lack uncertainty evidence: backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, foot_contact, leg_odometer, yaw_lock."
+  ],
+  "required_actions": [
+    "Backfill uncertainty evidence for: backlash_filter, dynamic_stance_estimator, dynamic_stance_estimator_d12, foot_contact, leg_odometer, yaw_lock."
+  ],
+  "subfamily_summaries": [
+    {
+      "subfamily": "backlash_filter",
+      "row_count": 3,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    },
+    {
+      "subfamily": "blip_filter",
+      "row_count": 5,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": true
+    },
+    {
+      "subfamily": "dynamic_stance_estimator",
+      "row_count": 4,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    },
+    {
+      "subfamily": "dynamic_stance_estimator_d12",
+      "row_count": 2,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    },
+    {
+      "subfamily": "foot_contact",
+      "row_count": 2,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    },
+    {
+      "subfamily": "leg_odometer",
+      "row_count": 2,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    },
+    {
+      "subfamily": "yaw_lock",
+      "row_count": 7,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    }
+  ],
+  "rows": [
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.initializebacklashfilterstate@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:23",
+      "subfamily": "backlash_filter",
+      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:23",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for backlash_filter."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for backlash_filter."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/backlash_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/backlash_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/backlash_filter/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[0]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.updatealphaparameter@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:38",
+      "subfamily": "backlash_filter",
+      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:38",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for backlash_filter."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for backlash_filter."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/backlash_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/backlash_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/backlash_filter/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[1]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.backlash_filter.updatecrossingtimemaximum@sciona/atoms/robotics/pronto/backlash_filter/atoms.py:56",
+      "subfamily": "backlash_filter",
+      "source_path": "sciona/atoms/robotics/pronto/backlash_filter/atoms.py:56",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for backlash_filter."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for backlash_filter."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/backlash_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/backlash_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/backlash_filter/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[2]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.blip_filter.bandpass_filter@sciona/atoms/robotics/pronto/blip_filter/atoms.py:21",
+      "subfamily": "blip_filter",
+      "source_path": "sciona/atoms/robotics/pronto/blip_filter/atoms.py:21",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/blip_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/matches.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[3]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.blip_filter.heart_rate_computation@sciona/atoms/robotics/pronto/blip_filter/atoms.py:119",
+      "subfamily": "blip_filter",
+      "source_path": "sciona/atoms/robotics/pronto/blip_filter/atoms.py:119",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/blip_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/matches.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[4]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.blip_filter.peak_correction@sciona/atoms/robotics/pronto/blip_filter/atoms.py:62",
+      "subfamily": "blip_filter",
+      "source_path": "sciona/atoms/robotics/pronto/blip_filter/atoms.py:62",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/blip_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/matches.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[5]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.blip_filter.r_peak_detection@sciona/atoms/robotics/pronto/blip_filter/atoms.py:40",
+      "subfamily": "blip_filter",
+      "source_path": "sciona/atoms/robotics/pronto/blip_filter/atoms.py:40",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/blip_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/matches.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[6]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.blip_filter.template_extraction@sciona/atoms/robotics/pronto/blip_filter/atoms.py:86",
+      "subfamily": "blip_filter",
+      "source_path": "sciona/atoms/robotics/pronto/blip_filter/atoms.py:86",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/blip_filter/references.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/cdg.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/matches.json",
+        "src/sciona/atoms/robotics/pronto/blip_filter/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[7]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initializefilter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
+      "subfamily": "dynamic_stance_estimator",
+      "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for dynamic_stance_estimator."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for dynamic_stance_estimator."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[8]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predictstep@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
+      "subfamily": "dynamic_stance_estimator",
+      "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for dynamic_stance_estimator."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for dynamic_stance_estimator."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[9]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.querystance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
+      "subfamily": "dynamic_stance_estimator",
+      "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for dynamic_stance_estimator."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for dynamic_stance_estimator."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[10]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.updatestep@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
+      "subfamily": "dynamic_stance_estimator",
+      "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for dynamic_stance_estimator."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for dynamic_stance_estimator."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/references.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/cdg.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[11]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator_d12.stanceestimation@sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/atoms.py:46",
+      "subfamily": "dynamic_stance_estimator_d12",
+      "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/atoms.py:46",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for dynamic_stance_estimator_d12."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for dynamic_stance_estimator_d12."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/references.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/cdg.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[12]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator_d12.stancestateinit@sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/atoms.py:24",
+      "subfamily": "dynamic_stance_estimator_d12",
+      "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/atoms.py:24",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for dynamic_stance_estimator_d12."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for dynamic_stance_estimator_d12."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/references.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/cdg.json",
+        "src/sciona/atoms/robotics/pronto/dynamic_stance_estimator_d12/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[13]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.foot_contact.foot_sensing_state_update@sciona/atoms/robotics/pronto/foot_contact/atoms.py:22",
+      "subfamily": "foot_contact",
+      "source_path": "sciona/atoms/robotics/pronto/foot_contact/atoms.py:22",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for foot_contact."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for foot_contact."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/foot_contact/references.json",
+        "src/sciona/atoms/robotics/pronto/foot_contact/cdg.json",
+        "src/sciona/atoms/robotics/pronto/foot_contact/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[14]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.foot_contact.mode_snapshot_readout@sciona/atoms/robotics/pronto/foot_contact/atoms.py:40",
+      "subfamily": "foot_contact",
+      "source_path": "sciona/atoms/robotics/pronto/foot_contact/atoms.py:40",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for foot_contact."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for foot_contact."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/foot_contact/references.json",
+        "src/sciona/atoms/robotics/pronto/foot_contact/cdg.json",
+        "src/sciona/atoms/robotics/pronto/foot_contact/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[15]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.leg_odometer.posequeryaccessors@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:42",
+      "subfamily": "leg_odometer",
+      "source_path": "sciona/atoms/robotics/pronto/leg_odometer/atoms.py:42",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for leg_odometer."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for leg_odometer."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/leg_odometer/references.json",
+        "src/sciona/atoms/robotics/pronto/leg_odometer/cdg.json",
+        "src/sciona/atoms/robotics/pronto/leg_odometer/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[16]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.leg_odometer.velocitystatereadout@sciona/atoms/robotics/pronto/leg_odometer/atoms.py:21",
+      "subfamily": "leg_odometer",
+      "source_path": "sciona/atoms/robotics/pronto/leg_odometer/atoms.py:21",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for leg_odometer."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for leg_odometer."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/leg_odometer/references.json",
+        "src/sciona/atoms/robotics/pronto/leg_odometer/cdg.json",
+        "src/sciona/atoms/robotics/pronto/leg_odometer/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[17]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.configurecorrectionandyawslippolicy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[18]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.initializeyawlockstate@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[19]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.readinitialjointangles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[20]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.readrobotstandingstatus@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[21]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.setjointposeandinitialangles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[22]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.setrobotstandingstatus@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[23]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.setstandinglinktargets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
+      "subfamily": "yaw_lock",
+      "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for yaw_lock."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for yaw_lock."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/yaw_lock/references.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/cdg.json",
+        "src/sciona/atoms/robotics/pronto/yaw_lock/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[24]"
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "robotics.rust_robotics.family_batch.review.v1",
+  "provider_repo": "sciona-atoms-robotics",
+  "family": "robotics.rust_robotics",
+  "review_status": "partial",
+  "semantic_verdict": "publishable_candidate_with_gaps",
+  "developer_semantic_verdict": "source_aligned_with_partial_evidence",
+  "trust_readiness": "blocked_on_uncertainty_backfill",
+  "authoritative_sources": [
+    "src/sciona/atoms/robotics/rust_robotics/**/references.json",
+    "src/sciona/atoms/robotics/rust_robotics/**/cdg.json",
+    "src/sciona/atoms/robotics/rust_robotics/**/matches.json",
+    "src/sciona/atoms/robotics/rust_robotics/**/uncertainty.json"
+  ],
+  "limitations": [
+    "Some subfamilies still lack uncertainty evidence: bicycle_kinematic."
+  ],
+  "required_actions": [
+    "Backfill uncertainty evidence for: bicycle_kinematic."
+  ],
+  "subfamily_summaries": [
+    {
+      "subfamily": "rust_robotics",
+      "row_count": 4,
+      "has_cdg": true,
+      "has_matches": false,
+      "has_uncertainty": true
+    },
+    {
+      "subfamily": "bicycle_kinematic",
+      "row_count": 6,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": false
+    },
+    {
+      "subfamily": "longitudinal_dynamics",
+      "row_count": 8,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": true
+    },
+    {
+      "subfamily": "n_joint_arm_2d",
+      "row_count": 4,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": true
+    }
+  ],
+  "rows": [
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.controls.pure_pursuit@sciona/atoms/robotics/rust_robotics/controls.py:58",
+      "subfamily": "rust_robotics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/controls.py:58",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[0]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.dijkstra_path_planning@sciona/atoms/robotics/rust_robotics/atoms.py:43",
+      "subfamily": "rust_robotics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/atoms.py:43",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[1]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_solver@sciona/atoms/robotics/rust_robotics/atoms.py:19",
+      "subfamily": "rust_robotics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/atoms.py:19",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[2]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.num_methods.rk4@sciona/atoms/robotics/rust_robotics/num_methods.py:50",
+      "subfamily": "rust_robotics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/num_methods.py:50",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[3]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.computelinearizedstatematrices@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98",
+      "subfamily": "bicycle_kinematic",
+      "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for bicycle_kinematic."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for bicycle_kinematic."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[4]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.computesideslipangle@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77",
+      "subfamily": "bicycle_kinematic",
+      "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for bicycle_kinematic."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for bicycle_kinematic."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[5]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.constructgeometrymodel@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30",
+      "subfamily": "bicycle_kinematic",
+      "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for bicycle_kinematic."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for bicycle_kinematic."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[6]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.evaluateandinvertdynamics@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139",
+      "subfamily": "bicycle_kinematic",
+      "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for bicycle_kinematic."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for bicycle_kinematic."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[7]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.loadmodelfromfile@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45",
+      "subfamily": "bicycle_kinematic",
+      "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for bicycle_kinematic."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for bicycle_kinematic."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[8]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.querygeometryparameters@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61",
+      "subfamily": "bicycle_kinematic",
+      "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_gap",
+      "trust_readiness": "blocked_on_uncertainty_backfill",
+      "limitations": [
+        "No uncertainty.json present for bicycle_kinematic."
+      ],
+      "required_actions": [
+        "Backfill uncertainty evidence for bicycle_kinematic."
+      ],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/bicycle_kinematic/matches.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[9]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_aerodynamic_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:53",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:53",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[10]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_gravity_grade_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:91",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:91",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[11]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_rolling_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:72",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:72",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[12]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.deserialize_model_spec@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:208",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:208",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[13]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.evaluate_dynamics_derivatives@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:111",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:111",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[14]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.initialize_model@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:27",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:27",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[15]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.linearize_dynamics@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:145",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:145",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[16]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.solve_control_for_target_derivative@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:175",
+      "subfamily": "longitudinal_dynamics",
+      "source_path": "sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:175",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[17]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.controlinputsynthesis@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:103",
+      "subfamily": "n_joint_arm_2d",
+      "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:103",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[18]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.dynamicsandlinearizationkernel@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:78",
+      "subfamily": "n_joint_arm_2d",
+      "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:78",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[19]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.kinematicgoalfeasibility@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:46",
+      "subfamily": "n_joint_arm_2d",
+      "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:46",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[20]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.modelspecloadingandsizing@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:22",
+      "subfamily": "n_joint_arm_2d",
+      "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:22",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/references.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/cdg.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/matches.json",
+        "src/sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[21]"
+    }
+  ]
+}
