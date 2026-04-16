@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "provider_repo": "sciona-atoms-robotics",
+  "scope": [
+    "robotics.pronto",
+    "robotics.rust_robotics"
+  ],
+  "repository_default": {
+    "license_expression": "NOASSERTION",
+    "status": "unknown",
+    "confidence": "low",
+    "rationale": "No repository-level LICENSE/COPYING/NOTICE file or SPDX declaration was found in this scratch tree."
+  },
+  "family_overrides": [],
+  "family_inventory": [
+    {
+      "family": "robotics.pronto",
+      "license_expression": "NOASSERTION",
+      "status": "unknown",
+      "confidence": "low",
+      "rationale": "No family-specific license declaration or vendor notice was found for the pronto tree.",
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto"
+      ]
+    },
+    {
+      "family": "robotics.rust_robotics",
+      "license_expression": "NOASSERTION",
+      "status": "unknown",
+      "confidence": "low",
+      "rationale": "No family-specific license declaration or vendor notice was found for the rust_robotics tree.",
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/rust_robotics"
+      ]
+    }
+  ],
+  "unresolved_families": []
+}
