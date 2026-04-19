@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "atom": "apply_torque_adjustment",
+  "estimates": [
+    {
+      "mode": "source_review",
+      "scalar_factor": 1.0,
+      "confidence": 0.9,
+      "n_trials": 3,
+      "epsilon": 1e-12,
+      "input_regime": "deterministic effort-over-gain correction with clamp and disabled-gain cases",
+      "notes": "Source-aligned deterministic transform; uncertainty is limited to caller-supplied joint effort and gain calibration."
+    }
+  ],
+  "atoms": {
+    "sciona.atoms.robotics.pronto.torque_adjustment.apply_torque_adjustment@sciona/atoms/robotics/pronto/torque_adjustment/atoms.py:47": {
+      "review_confidence": "high",
+      "uncertainty_notes": [
+        "The atom is deterministic for supplied positions, efforts, and gains; physical calibration uncertainty is outside the atom boundary."
+      ],
+      "source_review": "manual_pronto_torque_adjustment_reingest"
+    }
+  }
+}

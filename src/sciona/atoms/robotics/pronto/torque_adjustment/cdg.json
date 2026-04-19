@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "node_id": "torque_adjustment_root",
+      "parent_id": null,
+      "name": "torque_adjustment",
+      "description": "Pronto torque-based joint-position adjustment.",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "apply_torque_adjustment"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Effort-over-gain joint deflection correction with bounded magnitude.",
+      "critic_notes": "",
+      "decomposition_rationale": "The source class exposes processSample as the observable public behavior; magnitudeLimit is an internal helper."
+    },
+    {
+      "node_id": "apply_torque_adjustment",
+      "parent_id": "torque_adjustment_root",
+      "name": "apply_torque_adjustment",
+      "description": "Subtract a bounded effort-over-gain correction from configured joint positions.",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "names",
+          "type_desc": "Sequence[str]",
+          "constraints": "joint names aligned with positions and efforts",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "positions",
+          "type_desc": "Sequence[float]",
+          "constraints": "finite joint positions aligned with names",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "efforts",
+          "type_desc": "Sequence[float]",
+          "constraints": "finite joint efforts aligned with names",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "joints_to_filter",
+          "type_desc": "Sequence[str]",
+          "constraints": "configured joint names to adjust",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "filter_gains",
+          "type_desc": "Sequence[float]",
+          "constraints": "gains aligned with joints_to_filter",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "max_adjustment",
+          "type_desc": "float",
+          "constraints": "positive finite clamp magnitude",
+          "required": false,
+          "default_value_repr": "0.1"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "list[float]",
+          "constraints": "finite adjusted joint positions preserving input order"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(names: Sequence[str], positions: Sequence[float], efforts: Sequence[float], joints_to_filter: Sequence[str], filter_gains: Sequence[float], max_adjustment: float = 0.1) -> list[float]",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Pronto TorqueAdjustment::processSample semantics without mutating the caller's position vector.",
+      "critic_notes": "",
+      "decomposition_rationale": "One atom captures the source-backed public transform while inlining the private clamp helper."
+    }
+  ]
+}

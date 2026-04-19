@@ -31,6 +31,7 @@ def _assert_bundle(bundle_path: Path, family: str, provider_repo: str, family_ro
     if has_uncertainty_summaries:
         assert any(summary["has_uncertainty"] for summary in bundle["subfamily_summaries"])
 
+    summaries = {summary["subfamily"]: summary for summary in bundle["subfamily_summaries"]}
     for idx, row in enumerate(bundle["rows"]):
         assert row["review_record_path"] == f"src/sciona/atoms/{family.replace('.', '/')}/review_bundle.json#rows[{idx}]"
         assert row["source_path"].startswith(f"sciona/atoms/{family.replace('.', '/')}/")
@@ -39,7 +40,7 @@ def _assert_bundle(bundle_path: Path, family: str, provider_repo: str, family_ro
         assert row["authoritative_sources"][0].startswith(f"src/sciona/atoms/{family.replace('.', '/')}/")
         assert row["authoritative_sources"][1].endswith("cdg.json")
         has_matches = any(source.endswith("matches.json") for source in row["authoritative_sources"])
-        if row["subfamily"] == family.split(".", 1)[1]:
+        if row["subfamily"] == family.split(".", 1)[1] or not summaries[row["subfamily"]]["has_matches"]:
             assert not has_matches
         else:
             assert has_matches

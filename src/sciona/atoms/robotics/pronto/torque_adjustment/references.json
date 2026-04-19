@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "sciona.atoms.robotics.pronto.torque_adjustment.apply_torque_adjustment@sciona/atoms/robotics/pronto/torque_adjustment/atoms.py:47": {
+      "references": [
+        {
+          "ref_id": "repo_pronto",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [
+              "EstimateTools::TorqueAdjustment::processSample",
+              "EstimateTools::TorqueAdjustment::magnitudeLimit"
+            ],
+            "confidence": "high",
+            "notes": "Python atom mirrors the vendored Pronto torque adjustment source: locate configured joints, skip non-normal gains, subtract effort/gain corrections, and clamp correction magnitude to 0.1 by default."
+          }
+        },
+        {
+          "ref_id": "camurri2020pronto",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Pronto software paper provides project-level context for the upstream robotics estimator repository."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

@@ -89,6 +89,13 @@
       "has_uncertainty": true
     },
     {
+      "subfamily": "torque_adjustment",
+      "row_count": 1,
+      "has_cdg": true,
+      "has_matches": true,
+      "has_uncertainty": true
+    },
+    {
       "subfamily": "yaw_lock",
       "row_count": 7,
       "has_cdg": true,
@@ -576,7 +583,7 @@
         "src/sciona/atoms/robotics/pronto/ekf_smoother/cdg.json",
         "src/sciona/atoms/robotics/pronto/ekf_smoother/uncertainty.json"
       ],
-      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[14]"
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[27]"
     },
     {
       "atom_fqdn": "sciona.atoms.robotics.pronto.flex_estimator.estimate_flex_deflection@sciona/atoms/robotics/pronto/flex_estimator/atoms.py:10",
@@ -593,7 +600,25 @@
         "src/sciona/atoms/robotics/pronto/flex_estimator/cdg.json",
         "src/sciona/atoms/robotics/pronto/flex_estimator/uncertainty.json"
       ],
-      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[27]"
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[28]"
+    },
+    {
+      "atom_fqdn": "sciona.atoms.robotics.pronto.torque_adjustment.apply_torque_adjustment@sciona/atoms/robotics/pronto/torque_adjustment/atoms.py:47",
+      "subfamily": "torque_adjustment",
+      "source_path": "sciona/atoms/robotics/pronto/torque_adjustment/atoms.py:47",
+      "review_status": "reviewed",
+      "semantic_verdict": "publishable_candidate",
+      "developer_semantic_verdict": "source_aligned_with_evidence",
+      "trust_readiness": "ready_for_manifest_merge",
+      "limitations": [],
+      "required_actions": [],
+      "authoritative_sources": [
+        "src/sciona/atoms/robotics/pronto/torque_adjustment/references.json",
+        "src/sciona/atoms/robotics/pronto/torque_adjustment/cdg.json",
+        "src/sciona/atoms/robotics/pronto/torque_adjustment/matches.json",
+        "src/sciona/atoms/robotics/pronto/torque_adjustment/uncertainty.json"
+      ],
+      "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[29]"
     }
   ]
 }
