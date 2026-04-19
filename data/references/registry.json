@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "references": {
+    "camurri2020pronto": {
+      "ref_id": "camurri2020pronto",
+      "type": "paper",
+      "title": "Pronto: A Multi-Sensor State Estimator for Legged Robots in Real-World Scenarios",
+      "authors": [
+        "Marco Camurri",
+        "Milad Ramezani",
+        "Simona Nobili",
+        "Maurice Fallon"
+      ],
+      "year": 2020,
+      "venue": "Frontiers in Robotics and AI",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Primary Pronto software paper cited by the upstream repository."
+      },
+      "doi": "10.3389/frobt.2020.00068",
+      "url": "https://doi.org/10.3389/frobt.2020.00068"
+    },
+    "repo_pronto": {
+      "ref_id": "repo_pronto",
+      "type": "repository",
+      "title": "pronto",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/PickNikRobotics/pronto",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    },
+    "repo_rust_robotics": {
+      "ref_id": "repo_rust_robotics",
+      "type": "repository",
+      "title": "rust_robotics",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/shassen14/rust_robotics",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    }
+  }
+}
