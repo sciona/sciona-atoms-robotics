@@ -28,7 +28,7 @@
       "parent_id": "inverse_schmitt_root",
       "name": "inverse_schmitt_trigger_transform",
       "description": "Apply an inverse Schmitt trigger with hysteresis to a 1D signal.",
-      "concept_type": "custom",
+      "concept_type": "signal_transform",
       "inputs": [
         {
           "name": "input_signal",

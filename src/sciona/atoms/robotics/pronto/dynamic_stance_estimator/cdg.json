@@ -180,7 +180,7 @@
       "parent_id": "DynamicStanceEstimator_root",
       "name": "QueryStance",
       "description": "Extracts the stance (position) from the state vector.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "current_state",

@@ -31,7 +31,7 @@
       "parent_id": "RustRobotics_root",
       "name": "n_joint_arm_solver",
       "description": "Solves custom kinematics and dynamics for an N-joint system.",
-      "concept_type": "custom",
+      "concept_type": "optimization",
       "inputs": [
         {
           "name": "data",
@@ -70,7 +70,7 @@
       "parent_id": "RustRobotics_root",
       "name": "dijkstra_path_planning",
       "description": "Computes the shortest path on a weighted graph from a single source node.",
-      "concept_type": "custom",
+      "concept_type": "graph_traversal",
       "inputs": [
         {
           "name": "data",

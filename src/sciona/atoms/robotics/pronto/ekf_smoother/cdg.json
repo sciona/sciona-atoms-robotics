@@ -28,7 +28,7 @@
       "parent_id": "ekf_smoother_root",
       "name": "initialize_state_estimator_state",
       "description": "Bootstrap a default EKF smoother state estimate bundle.",
-      "concept_type": "custom",
+      "concept_type": "signal_filter",
       "inputs": [],
       "outputs": [
         {

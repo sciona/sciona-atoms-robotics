@@ -29,7 +29,7 @@
       "parent_id": "FootContactClassifier_root",
       "name": "Foot Sensing State Update",
       "description": "Applies a pure state transition for left/right foot sensing flags, returning a new sensing state object.",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "foot_sensing_state_in",
@@ -67,7 +67,7 @@
       "parent_id": "FootContactClassifier_root",
       "name": "Mode Snapshot Readout",
       "description": "Reads current and previous mode from immutable classifier state and exposes them as explicit outputs.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "mode_state_in",

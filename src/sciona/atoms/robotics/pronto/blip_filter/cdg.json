@@ -65,7 +65,7 @@
       "parent_id": "BlipFilter_root",
       "name": "R-Peak Detection",
       "description": "Detect R-peak locations in the filtered ECG signal using the Hamilton segmenter algorithm.",
-      "concept_type": "custom",
+      "concept_type": "clustering",
       "inputs": [
         {
           "name": "filtered",
@@ -136,7 +136,7 @@
       "parent_id": "BlipFilter_root",
       "name": "Template Extraction",
       "description": "Extract individual heartbeat waveform templates around each R-peak with configurable before/after windows.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "filtered",
@@ -179,7 +179,7 @@
       "parent_id": "BlipFilter_root",
       "name": "Heart Rate Computation",
       "description": "Compute instantaneous heart rate in bpm from R-R intervals with optional smoothing.",
-      "concept_type": "custom",
+      "concept_type": "signal_filter",
       "inputs": [
         {
           "name": "rpeaks",

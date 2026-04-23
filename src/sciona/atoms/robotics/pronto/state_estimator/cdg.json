@@ -28,7 +28,7 @@
       "parent_id": "state_estimator_root",
       "name": "update_state_estimate",
       "description": "Fuse a measurement into the RBIS state using an EKF-style linear update.",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "prior_state",

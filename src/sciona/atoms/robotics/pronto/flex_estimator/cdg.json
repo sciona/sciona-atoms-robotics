@@ -28,7 +28,7 @@
       "parent_id": "flex_estimator_root",
       "name": "estimate_flex_deflection",
       "description": "Estimate per-leg flex deflection from hip effort on stance legs.",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "hip_positions",

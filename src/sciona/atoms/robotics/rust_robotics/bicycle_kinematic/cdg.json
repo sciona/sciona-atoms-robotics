@@ -71,7 +71,7 @@
       "parent_id": "Model_root",
       "name": "LoadModelFromFile",
       "description": "Deserialize model geometry parameters from storage into an immutable model spec.",
-      "concept_type": "custom",
+      "concept_type": "geometry",
       "inputs": [
         {
           "name": "filename",
@@ -426,7 +426,7 @@
       "parent_id": "computelinearizedstatematrices",
       "name": "AssembleControlJacobian",
       "description": "Assemble control Jacobian B by concatenating velocity and steering sensitivity columns in control order.",
-      "concept_type": "custom",
+      "concept_type": "sorting",
       "inputs": [
         {
           "name": "velocity_column",
@@ -681,7 +681,7 @@
       "parent_id": "evaluateandinvertdynamics",
       "name": "InferControlFromStateRate",
       "description": "Map current state and desired state derivative to inferred control via inverse dynamics interface.",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "model_spec",

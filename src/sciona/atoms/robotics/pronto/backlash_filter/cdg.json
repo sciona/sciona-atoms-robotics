@@ -30,7 +30,7 @@
       "parent_id": "BacklashFilter_root",
       "name": "InitializeBacklashFilterState",
       "description": "Create the initial immutable state object for the filter parameters.",
-      "concept_type": "custom",
+      "concept_type": "state_init",
       "inputs": [
         {
           "name": "config",
@@ -63,7 +63,7 @@
       "parent_id": "BacklashFilter_root",
       "name": "UpdateAlphaParameter",
       "description": "Produce a new filter state with an updated alpha parameter.",
-      "concept_type": "custom",
+      "concept_type": "state_init",
       "inputs": [
         {
           "name": "state_in",
@@ -101,7 +101,7 @@
       "parent_id": "BacklashFilter_root",
       "name": "UpdateCrossingTimeMaximum",
       "description": "Produce a new filter state with an updated maximum crossing time.",
-      "concept_type": "custom",
+      "concept_type": "state_init",
       "inputs": [
         {
           "name": "state_in",

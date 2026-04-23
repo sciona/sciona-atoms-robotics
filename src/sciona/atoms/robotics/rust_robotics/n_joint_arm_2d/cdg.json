@@ -31,7 +31,7 @@
       "parent_id": "ModelD_root",
       "name": "ModelSpecLoadingAndSizing",
       "description": "Loads serialized model data and exposes structural sizing metadata for downstream computation.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "filename",
@@ -225,7 +225,7 @@
       "parent_id": "kinematicgoalfeasibility",
       "name": "ExtractCurrentEndEffectorPosition",
       "description": "Read terminal end-effector (x, y) from the packed state vector using degree-of-freedom and state ratio layout.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "x",
@@ -310,7 +310,7 @@
       "node_id": "assemblepositionjacobian",
       "parent_id": "kinematicgoalfeasibility",
       "name": "AssemblePositionJacobian",
-      "description": "Construct the 2xDOF position Jacobian from current chain state and link lengths by accumulating each joint\u2019s positional influence.",
+      "description": "Construct the 2xDOF position Jacobian from current chain state and link lengths by accumulating each joint’s positional influence.",
       "concept_type": "algebra",
       "inputs": [
         {
@@ -565,7 +565,7 @@
       "parent_id": "dynamicsandlinearizationkernel",
       "name": "compute_local_jacobian_linearization",
       "description": "Evaluate local Jacobian linearization matrices for dynamics at (x, u, t). In current code this step is declared but not implemented (todo!).",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "self",

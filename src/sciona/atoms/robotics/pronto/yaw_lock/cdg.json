@@ -34,7 +34,7 @@
       "parent_id": "YawLock_root",
       "name": "InitializeYawLockState",
       "description": "Create the initial immutable YawLockState container for all persistent fields (parameters, standing flag, joint state, standing links).",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "config",
@@ -67,7 +67,7 @@
       "parent_id": "YawLock_root",
       "name": "ConfigureCorrectionAndYawSlipPolicy",
       "description": "Set correction cadence and yaw-slip detection policy by returning a new state with updated parameter fields.",
-      "concept_type": "custom",
+      "concept_type": "state_init",
       "inputs": [
         {
           "name": "state_in",
@@ -120,7 +120,7 @@
       "parent_id": "YawLock_root",
       "name": "SetRobotStandingStatus",
       "description": "Write robot standing status by producing a new immutable state.",
-      "concept_type": "custom",
+      "concept_type": "state_init",
       "inputs": [
         {
           "name": "state_in",
@@ -158,7 +158,7 @@
       "parent_id": "YawLock_root",
       "name": "ReadRobotStandingStatus",
       "description": "Read current robot standing status from immutable state without mutation.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "state_in",
@@ -191,7 +191,7 @@
       "parent_id": "YawLock_root",
       "name": "SetJointPoseAndInitialAngles",
       "description": "Store joint identity/position inputs and corresponding initial-angle snapshot as a new immutable state.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "state_in",
@@ -239,7 +239,7 @@
       "parent_id": "YawLock_root",
       "name": "ReadInitialJointAngles",
       "description": "Read stored initial joint angles from immutable state.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "state_in",
@@ -272,7 +272,7 @@
       "parent_id": "YawLock_root",
       "name": "SetStandingLinkTargets",
       "description": "Set left/right standing link identifiers in a newly returned immutable state.",
-      "concept_type": "custom",
+      "concept_type": "state_init",
       "inputs": [
         {
           "name": "state_in",
