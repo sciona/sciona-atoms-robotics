@@ -130,7 +130,30 @@
       "parallelizable": false,
       "conceptual_summary": "LinearStateProjectionWithNoise. Projects a system's current state vector and its associated uncertainty (covariance) forward by one discrete step. The projection uses a linear transformation for the state vector and a congruent transformation for the covariance matrix, with an added noise term to model intrinsic system unpredictability.. Applications: Economic Forecasting: Projecting a vector of key economic indicators (e.g., inflation, unemployment) and their inter-dependencies into the next fiscal quarter using a linearized macroeconomic model., Neural Population Dynamics: Estimating the future activity state and firing rate covariance of a group of neurons based on a linear model of synaptic connections and intrinsic neural noise., Climate Modeling: Predicting a vector of atmospheric variables (temperature, pressure) for a specific grid cell at a future time point, propagating the current estimate and its uncertainty forward with a linearized atmospheric model., Supply Chain Management: Forecasting inventory levels for multiple products and their variance based on a linear model of consumption rates, lead times, and demand volatility.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "common_patterns": [
+        {
+          "pattern_id": "kalman_filter_cycle",
+          "description": "Predict state forward, then fuse measurement via Kalman update",
+          "atoms": [
+            "predict_step",
+            "update_step"
+          ],
+          "ordering": "sequential",
+          "when": "Stage describes Kalman filter, EKF, or sensor fusion"
+        },
+        {
+          "pattern_id": "kalman_filter_with_smoothing",
+          "description": "Full EKF cycle with RTS backward smoother",
+          "atoms": [
+            "predict_step",
+            "update_step",
+            "rts_smooth"
+          ],
+          "ordering": "sequential",
+          "when": "Stage describes EKF with smoothing or forward-backward filtering"
+        }
+      ]
     },
     {
       "node_id": "update_step",
@@ -173,7 +196,30 @@
       "parallelizable": false,
       "conceptual_summary": "BeliefCorrectionFromObservation. Combines a probabilistic state estimate (a mean vector and a covariance matrix) with a new observation to produce a refined, maximum-likelihood state estimate. It computes the discrepancy between the observation and the state's predicted projection into the observation space. This discrepancy, weighted by the relative uncertainties of the state estimate and the observation model, is used to adjust the initial state, yielding a posterior estimate with optimally reduced uncertainty.. Applications: Economics: Estimating the 'true' daily volatility of a financial asset by treating the noisy daily squared returns as measurements of an underlying stochastic volatility process., Neuroscience: Tracking the firing rate of a neuron in real-time, where the prior belief about the rate is updated based on discrete spike train observations, which act as noisy measurements., Climate Science: Assimilating satellite temperature readings (measurements) into a numerical weather prediction model, where the model's grid-point forecasts (predicted state) are corrected to better match the real-world data.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "common_patterns": [
+        {
+          "pattern_id": "kalman_filter_cycle",
+          "description": "Predict state forward, then fuse measurement via Kalman update",
+          "atoms": [
+            "predict_step",
+            "update_step"
+          ],
+          "ordering": "sequential",
+          "when": "Stage describes Kalman filter, EKF, or sensor fusion"
+        },
+        {
+          "pattern_id": "kalman_filter_with_smoothing",
+          "description": "Full EKF cycle with RTS backward smoother",
+          "atoms": [
+            "predict_step",
+            "update_step",
+            "rts_smooth"
+          ],
+          "ordering": "sequential",
+          "when": "Stage describes EKF with smoothing or forward-backward filtering"
+        }
+      ]
     },
     {
       "node_id": "query_stance",
