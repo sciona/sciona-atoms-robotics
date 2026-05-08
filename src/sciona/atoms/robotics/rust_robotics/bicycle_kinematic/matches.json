@@ -1,7 +1,7 @@
 [
   {
     "pdg_node": {
-      "predicate_id": "constructgeometrymodel",
+      "predicate_id": "construct_geometry_model",
       "statement": "(length_front: float, length_rear: float) -> ModelSpec",
       "informal_desc": "Create an immutable vehicle geometry/state model from explicit axle-length parameters.",
       "prover": "python",
@@ -10,7 +10,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "constructgeometrymodel",
+          "name": "construct_geometry_model",
           "type_signature": "(length_front: float, length_rear: float) -> ModelSpec",
           "docstring": "Create an immutable vehicle geometry/state model from explicit axle-length parameters.",
           "conceptual_summary": "Immutable Asymmetric Offset Configuration. Constructs a canonical configuration object from two non-negative scalar offsets defined on opposite sides of a reference origin. The transform is a direct parameter-to-structure mapping with boundary validation, without optimization, recursion, or stochastic sampling. The resulting artifact is immutable, preserving the input values as fixed geometric/state invariants.. Applications: Robotics: instantiate a rigid-link kinematic segment model from proximal and distal link extents around a joint origin., Materials engineering: define an immutable cross-section descriptor from layer thicknesses on opposite sides of a neutral axis., Computational imaging: encode asymmetric sensor active-region margins (left/right or near/far) into a fixed calibration schema., Neuroscience modeling: represent asymmetric receptive-field spatial extents around a central reference point in a simulation state object.",
@@ -30,7 +30,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "constructgeometrymodel",
+          "name": "construct_geometry_model",
           "type_signature": "(length_front: float, length_rear: float) -> ModelSpec",
           "docstring": "Create an immutable vehicle geometry/state model from explicit axle-length parameters.",
           "conceptual_summary": "Immutable Asymmetric Offset Configuration. Constructs a canonical configuration object from two non-negative scalar offsets defined on opposite sides of a reference origin. The transform is a direct parameter-to-structure mapping with boundary validation, without optimization, recursion, or stochastic sampling. The resulting artifact is immutable, preserving the input values as fixed geometric/state invariants.. Applications: Robotics: instantiate a rigid-link kinematic segment model from proximal and distal link extents around a joint origin., Materials engineering: define an immutable cross-section descriptor from layer thicknesses on opposite sides of a neutral axis., Computational imaging: encode asymmetric sensor active-region margins (left/right or near/far) into a fixed calibration schema., Neuroscience modeling: represent asymmetric receptive-field spatial extents around a central reference point in a simulation state object.",
@@ -46,7 +46,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "constructgeometrymodel",
+            "name": "construct_geometry_model",
             "type_signature": "(length_front: float, length_rear: float) -> ModelSpec",
             "docstring": "Create an immutable vehicle geometry/state model from explicit axle-length parameters.",
             "conceptual_summary": "Immutable Asymmetric Offset Configuration. Constructs a canonical configuration object from two non-negative scalar offsets defined on opposite sides of a reference origin. The transform is a direct parameter-to-structure mapping with boundary validation, without optimization, recursion, or stochastic sampling. The resulting artifact is immutable, preserving the input values as fixed geometric/state invariants.. Applications: Robotics: instantiate a rigid-link kinematic segment model from proximal and distal link extents around a joint origin., Materials engineering: define an immutable cross-section descriptor from layer thicknesses on opposite sides of a neutral axis., Computational imaging: encode asymmetric sensor active-region margins (left/right or near/far) into a fixed calibration schema., Neuroscience modeling: represent asymmetric receptive-field spatial extents around a central reference point in a simulation state object.",
@@ -67,7 +67,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "loadmodelfromfile",
+      "predicate_id": "load_model_from_file",
       "statement": "(filename: string) -> ModelSpec",
       "informal_desc": "Deserialize model geometry parameters from storage into an immutable model spec.",
       "prover": "python",
@@ -76,7 +76,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "loadmodelfromfile",
+          "name": "load_model_from_file",
           "type_signature": "(filename: string) -> ModelSpec",
           "docstring": "Deserialize model geometry parameters from storage into an immutable model spec.",
           "conceptual_summary": "ImmutableStructuredSpecHydration. Accepts a locator to persisted serialized data, reads the byte stream, and decodes it using a predefined schema into a typed in-memory parameter structure. The reconstructed structure is then frozen so downstream computations can rely on referential stability and mutation-free semantics.. Applications: Hydrating finite-element mesh and boundary-condition specifications for mechanical simulation from a persisted artifact., Loading calibrated kinematic-chain parameters for robotic motion planning from a configuration file., Reconstructing neuroimaging preprocessing pipeline parameter sets from stored manifests for reproducible analysis., Restoring compiler optimization-pass configuration graphs from serialized build metadata.",
@@ -96,7 +96,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "loadmodelfromfile",
+          "name": "load_model_from_file",
           "type_signature": "(filename: string) -> ModelSpec",
           "docstring": "Deserialize model geometry parameters from storage into an immutable model spec.",
           "conceptual_summary": "ImmutableStructuredSpecHydration. Accepts a locator to persisted serialized data, reads the byte stream, and decodes it using a predefined schema into a typed in-memory parameter structure. The reconstructed structure is then frozen so downstream computations can rely on referential stability and mutation-free semantics.. Applications: Hydrating finite-element mesh and boundary-condition specifications for mechanical simulation from a persisted artifact., Loading calibrated kinematic-chain parameters for robotic motion planning from a configuration file., Reconstructing neuroimaging preprocessing pipeline parameter sets from stored manifests for reproducible analysis., Restoring compiler optimization-pass configuration graphs from serialized build metadata.",
@@ -112,7 +112,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "loadmodelfromfile",
+            "name": "load_model_from_file",
             "type_signature": "(filename: string) -> ModelSpec",
             "docstring": "Deserialize model geometry parameters from storage into an immutable model spec.",
             "conceptual_summary": "ImmutableStructuredSpecHydration. Accepts a locator to persisted serialized data, reads the byte stream, and decodes it using a predefined schema into a typed in-memory parameter structure. The reconstructed structure is then frozen so downstream computations can rely on referential stability and mutation-free semantics.. Applications: Hydrating finite-element mesh and boundary-condition specifications for mechanical simulation from a persisted artifact., Loading calibrated kinematic-chain parameters for robotic motion planning from a configuration file., Reconstructing neuroimaging preprocessing pipeline parameter sets from stored manifests for reproducible analysis., Restoring compiler optimization-pass configuration graphs from serialized build metadata.",
@@ -133,7 +133,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "querygeometryparameters",
+      "predicate_id": "query_geometry_parameters",
       "statement": "(model_spec: ModelSpec) -> tuple[float, float, float]",
       "informal_desc": "Project front length, rear length, and derived wheelbase from the immutable model spec.",
       "prover": "python",
@@ -142,7 +142,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "querygeometryparameters",
+          "name": "query_geometry_parameters",
           "type_signature": "(model_spec: ModelSpec) -> tuple[float, float, float]",
           "docstring": "Project front length, rear length, and derived wheelbase from the immutable model spec.",
           "conceptual_summary": "Bipartite Scalar Projection with Additive Extent Derivation. The operation reads two non-negative scalar components from an immutable structured input and returns them directly as explicit outputs. It then computes a third scalar by linear addition of those components, producing a total 1D extent. No state is changed, and the mapping is fully deterministic.. Applications: Genomics: expose upstream/downstream sequence segment lengths and derive total amplicon span., Network engineering: expose forward/reverse path propagation delays and derive round-trip baseline delay., Manufacturing process planning: expose pre-process/post-process motion distances and derive total traverse distance., Signal processing: expose pre-event/post-event window durations and derive full analysis window length.",
@@ -162,7 +162,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "querygeometryparameters",
+          "name": "query_geometry_parameters",
           "type_signature": "(model_spec: ModelSpec) -> tuple[float, float, float]",
           "docstring": "Project front length, rear length, and derived wheelbase from the immutable model spec.",
           "conceptual_summary": "Bipartite Scalar Projection with Additive Extent Derivation. The operation reads two non-negative scalar components from an immutable structured input and returns them directly as explicit outputs. It then computes a third scalar by linear addition of those components, producing a total 1D extent. No state is changed, and the mapping is fully deterministic.. Applications: Genomics: expose upstream/downstream sequence segment lengths and derive total amplicon span., Network engineering: expose forward/reverse path propagation delays and derive round-trip baseline delay., Manufacturing process planning: expose pre-process/post-process motion distances and derive total traverse distance., Signal processing: expose pre-event/post-event window durations and derive full analysis window length.",
@@ -178,7 +178,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "querygeometryparameters",
+            "name": "query_geometry_parameters",
             "type_signature": "(model_spec: ModelSpec) -> tuple[float, float, float]",
             "docstring": "Project front length, rear length, and derived wheelbase from the immutable model spec.",
             "conceptual_summary": "Bipartite Scalar Projection with Additive Extent Derivation. The operation reads two non-negative scalar components from an immutable structured input and returns them directly as explicit outputs. It then computes a third scalar by linear addition of those components, producing a total 1D extent. No state is changed, and the mapping is fully deterministic.. Applications: Genomics: expose upstream/downstream sequence segment lengths and derive total amplicon span., Network engineering: expose forward/reverse path propagation delays and derive round-trip baseline delay., Manufacturing process planning: expose pre-process/post-process motion distances and derive total traverse distance., Signal processing: expose pre-event/post-event window durations and derive full analysis window length.",
@@ -199,7 +199,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "computesideslipangle",
+      "predicate_id": "compute_side_slip_angle",
       "statement": "(model_spec: ModelSpec, road_wheel_angle: float) -> float",
       "informal_desc": "Compute sideslip from steering input and vehicle geometry as a pure kinematic transform.",
       "prover": "python",
@@ -208,7 +208,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "computesideslipangle",
+          "name": "compute_side_slip_angle",
           "type_signature": "(model_spec: ModelSpec, road_wheel_angle: float) -> float",
           "docstring": "Compute sideslip from steering input and vehicle geometry as a pure kinematic transform.",
           "conceptual_summary": "Kinematic Deflection-to-Drift Angle Projection. Maps a single control deflection angle and fixed rigid-body geometry parameters to an instantaneous orientation offset angle using a closed-form trigonometric relation. The transform is purely kinematic (no forces, no integration over time): it projects local actuator deflection into global trajectory-direction deviation relative to a body-aligned reference axis. Zero input deflection yields zero output offset, and output sign follows input sign under symmetric parameterization.. Applications: Planar mobile robotics: convert steering-joint deflection and platform geometry into trajectory-heading offset for path tracking., Aerospace guidance: map control-surface deflection and airframe geometry to instantaneous flight-path angular deviation in simplified kinematic models., Catheter/continuum-tool navigation: translate proximal angular actuation and segment geometry into tip-direction offset estimates., Computer graphics/animation kinematics: derive motion-direction offset from joint rotation and rig geometry for procedural locomotion.",
@@ -228,7 +228,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "computesideslipangle",
+          "name": "compute_side_slip_angle",
           "type_signature": "(model_spec: ModelSpec, road_wheel_angle: float) -> float",
           "docstring": "Compute sideslip from steering input and vehicle geometry as a pure kinematic transform.",
           "conceptual_summary": "Kinematic Deflection-to-Drift Angle Projection. Maps a single control deflection angle and fixed rigid-body geometry parameters to an instantaneous orientation offset angle using a closed-form trigonometric relation. The transform is purely kinematic (no forces, no integration over time): it projects local actuator deflection into global trajectory-direction deviation relative to a body-aligned reference axis. Zero input deflection yields zero output offset, and output sign follows input sign under symmetric parameterization.. Applications: Planar mobile robotics: convert steering-joint deflection and platform geometry into trajectory-heading offset for path tracking., Aerospace guidance: map control-surface deflection and airframe geometry to instantaneous flight-path angular deviation in simplified kinematic models., Catheter/continuum-tool navigation: translate proximal angular actuation and segment geometry into tip-direction offset estimates., Computer graphics/animation kinematics: derive motion-direction offset from joint rotation and rig geometry for procedural locomotion.",
@@ -244,7 +244,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "computesideslipangle",
+            "name": "compute_side_slip_angle",
             "type_signature": "(model_spec: ModelSpec, road_wheel_angle: float) -> float",
             "docstring": "Compute sideslip from steering input and vehicle geometry as a pure kinematic transform.",
             "conceptual_summary": "Kinematic Deflection-to-Drift Angle Projection. Maps a single control deflection angle and fixed rigid-body geometry parameters to an instantaneous orientation offset angle using a closed-form trigonometric relation. The transform is purely kinematic (no forces, no integration over time): it projects local actuator deflection into global trajectory-direction deviation relative to a body-aligned reference axis. Zero input deflection yields zero output offset, and output sign follows input sign under symmetric parameterization.. Applications: Planar mobile robotics: convert steering-joint deflection and platform geometry into trajectory-heading offset for path tracking., Aerospace guidance: map control-surface deflection and airframe geometry to instantaneous flight-path angular deviation in simplified kinematic models., Catheter/continuum-tool navigation: translate proximal angular actuation and segment geometry into tip-direction offset estimates., Computer graphics/animation kinematics: derive motion-direction offset from joint rotation and rig geometry for procedural locomotion.",

@@ -27,7 +27,7 @@
     {
       "node_id": "foot_sensing_state_update",
       "parent_id": "FootContactClassifier_root",
-      "name": "Foot Sensing State Update",
+      "name": "foot_sensing_state_update",
       "description": "Applies a pure state transition for left/right foot sensing flags, returning a new sensing state object.",
       "concept_type": "analysis",
       "inputs": [
@@ -65,7 +65,7 @@
     {
       "node_id": "mode_snapshot_readout",
       "parent_id": "FootContactClassifier_root",
-      "name": "Mode Snapshot Readout",
+      "name": "mode_snapshot_readout",
       "description": "Reads current and previous mode from immutable classifier state and exposes them as explicit outputs.",
       "concept_type": "data_extraction",
       "inputs": [

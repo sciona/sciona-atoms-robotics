@@ -10,10 +10,10 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "modelspecloadingandsizing",
-        "kinematicgoalfeasibility",
-        "dynamicsandlinearizationkernel",
-        "controlinputsynthesis"
+        "model_spec_loading_and_sizing",
+        "kinematic_goal_feasibility",
+        "dynamics_and_linearization_kernel",
+        "control_input_synthesis"
       ],
       "depth": 0,
       "type_signature": "",
@@ -27,9 +27,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "modelspecloadingandsizing",
+      "node_id": "model_spec_loading_and_sizing",
       "parent_id": "ModelD_root",
-      "name": "ModelSpecLoadingAndSizing",
+      "name": "model_spec_loading_and_sizing",
       "description": "Loads serialized model data and exposes structural sizing metadata for downstream computation.",
       "concept_type": "data_extraction",
       "inputs": [
@@ -65,7 +65,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "kinematicgoalfeasibility",
+      "node_id": "kinematic_goal_feasibility",
       "parent_id": "ModelD_root",
       "name": "KinematicGoalFeasibility",
       "description": "Computes inverse-kinematic feasibility and goal-distance metrics for desired end-effector targets and initial state construction.",
@@ -136,7 +136,7 @@
     },
     {
       "node_id": "computegoaldistancemetric",
-      "parent_id": "kinematicgoalfeasibility",
+      "parent_id": "kinematic_goal_feasibility",
       "name": "ComputeGoalDistanceMetric",
       "description": "Validate current/goal positions as 2D vectors, compute Cartesian error, and return squared Euclidean goal distance.",
       "concept_type": "geometry",
@@ -179,7 +179,7 @@
     },
     {
       "node_id": "buildfeasiblestatefromdesiredangles",
-      "parent_id": "kinematicgoalfeasibility",
+      "parent_id": "kinematic_goal_feasibility",
       "name": "BuildFeasibleStateFromDesiredAngles",
       "description": "Roll forward the planar chain from desired joint angles to construct a feasible per-link state vector [x_i, y_i, cumulative_angle_i].",
       "concept_type": "geometry",
@@ -222,7 +222,7 @@
     },
     {
       "node_id": "extractcurrentendeffectorposition",
-      "parent_id": "kinematicgoalfeasibility",
+      "parent_id": "kinematic_goal_feasibility",
       "name": "ExtractCurrentEndEffectorPosition",
       "description": "Read terminal end-effector (x, y) from the packed state vector using degree-of-freedom and state ratio layout.",
       "concept_type": "data_extraction",
@@ -265,7 +265,7 @@
     },
     {
       "node_id": "computeiktargeterror",
-      "parent_id": "kinematicgoalfeasibility",
+      "parent_id": "kinematic_goal_feasibility",
       "name": "ComputeIKTargetError",
       "description": "Compute Cartesian error between desired target position and current end-effector position for IK correction.",
       "concept_type": "geometry",
@@ -308,7 +308,7 @@
     },
     {
       "node_id": "assemblepositionjacobian",
-      "parent_id": "kinematicgoalfeasibility",
+      "parent_id": "kinematic_goal_feasibility",
       "name": "AssemblePositionJacobian",
       "description": "Construct the 2xDOF position Jacobian from current chain state and link lengths by accumulating each joint’s positional influence.",
       "concept_type": "algebra",
@@ -361,7 +361,7 @@
     },
     {
       "node_id": "solveleastsquaresjointupdate",
-      "parent_id": "kinematicgoalfeasibility",
+      "parent_id": "kinematic_goal_feasibility",
       "name": "SolveLeastSquaresJointUpdate",
       "description": "Compute pseudo-inverse of the position Jacobian and map Cartesian error into joint-angle update space.",
       "concept_type": "algebra",
@@ -398,7 +398,7 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "dynamicsandlinearizationkernel",
+      "node_id": "dynamics_and_linearization_kernel",
       "parent_id": "ModelD_root",
       "name": "DynamicsAndLinearizationKernel",
       "description": "Evaluates continuous-time state derivatives and local Jacobian linearization of system dynamics.",
@@ -451,7 +451,7 @@
     },
     {
       "node_id": "derive_and_validate_system_dimensions",
-      "parent_id": "dynamicsandlinearizationkernel",
+      "parent_id": "dynamics_and_linearization_kernel",
       "name": "derive_and_validate_system_dimensions",
       "description": "Derive structural dimensions (state-to-dimension ratio, total states, degrees of freedom) and enforce compatibility between state size, link count, and input count.",
       "concept_type": "analysis",
@@ -504,7 +504,7 @@
     },
     {
       "node_id": "evaluate_chain_state_derivative",
-      "parent_id": "dynamicsandlinearizationkernel",
+      "parent_id": "dynamics_and_linearization_kernel",
       "name": "evaluate_chain_state_derivative",
       "description": "Compute continuous-time state derivatives by accumulating upstream link kinematic contributions to planar velocity components, then assigning joint angle-rate and angular-acceleration components per DOF.",
       "concept_type": "geometry",
@@ -562,7 +562,7 @@
     },
     {
       "node_id": "compute_local_jacobian_linearization",
-      "parent_id": "dynamicsandlinearizationkernel",
+      "parent_id": "dynamics_and_linearization_kernel",
       "name": "compute_local_jacobian_linearization",
       "description": "Evaluate local Jacobian linearization matrices for dynamics at (x, u, t). In current code this step is declared but not implemented (todo!).",
       "concept_type": "analysis",
@@ -609,9 +609,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "controlinputsynthesis",
+      "node_id": "control_input_synthesis",
       "parent_id": "ModelD_root",
-      "name": "ControlInputSynthesis",
+      "name": "control_input_synthesis",
       "description": "Synthesizes control action from current state and derivative information.",
       "concept_type": "custom",
       "inputs": [
@@ -708,8 +708,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "kinematicgoalfeasibility",
-      "target_id": "dynamicsandlinearizationkernel",
+      "source_id": "kinematic_goal_feasibility",
+      "target_id": "dynamics_and_linearization_kernel",
       "output_name": "feasible_state_initial",
       "input_name": "x",
       "source_type": "array-like",
@@ -717,8 +717,8 @@
       "requires_glue": false
     },
     {
-      "source_id": "dynamicsandlinearizationkernel",
-      "target_id": "controlinputsynthesis",
+      "source_id": "dynamics_and_linearization_kernel",
+      "target_id": "control_input_synthesis",
       "output_name": "x_dot",
       "input_name": "_x_dot",
       "source_type": "array-like",

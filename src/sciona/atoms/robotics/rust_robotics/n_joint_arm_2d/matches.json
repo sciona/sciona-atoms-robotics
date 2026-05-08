@@ -1,7 +1,7 @@
 [
   {
     "pdg_node": {
-      "predicate_id": "modelspecloadingandsizing",
+      "predicate_id": "model_spec_loading_and_sizing",
       "statement": "(filename: str) -> tuple[ModelDSpec, float]",
       "informal_desc": "Loads serialized model data and exposes structural sizing metadata for downstream computation.",
       "prover": "python",
@@ -10,7 +10,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "modelspecloadingandsizing",
+          "name": "model_spec_loading_and_sizing",
           "type_signature": "(filename: str) -> tuple[ModelDSpec, float]",
           "docstring": "Loads serialized model data and exposes structural sizing metadata for downstream computation.",
           "conceptual_summary": "SerializedStructureIngestionAndComplexityRatioExtraction. Reads a serialized structured artifact from a valid filesystem path and deserializes it into a typed in-memory specification for computation. It then derives a normalized structural complexity metric by computing the ratio between discrete state cardinality and representational dimensionality. The operation maps persistent encoded data into both an executable structural object and a scalar size invariant.. Applications: Finite-element engineering: load a serialized solver/mesh specification and compute state-variable density per geometric dimension., Robotics autonomy: ingest a serialized transition-system model and compute state-cardinality per latent-coordinate dimension., Computational biology: parse a serialized hidden-state model and compute hidden-state count per observation-space dimension., Network science: load a serialized dynamical graph-process specification and compute process-state count per embedding dimension.",
@@ -30,7 +30,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "modelspecloadingandsizing",
+          "name": "model_spec_loading_and_sizing",
           "type_signature": "(filename: str) -> tuple[ModelDSpec, float]",
           "docstring": "Loads serialized model data and exposes structural sizing metadata for downstream computation.",
           "conceptual_summary": "SerializedStructureIngestionAndComplexityRatioExtraction. Reads a serialized structured artifact from a valid filesystem path and deserializes it into a typed in-memory specification for computation. It then derives a normalized structural complexity metric by computing the ratio between discrete state cardinality and representational dimensionality. The operation maps persistent encoded data into both an executable structural object and a scalar size invariant.. Applications: Finite-element engineering: load a serialized solver/mesh specification and compute state-variable density per geometric dimension., Robotics autonomy: ingest a serialized transition-system model and compute state-cardinality per latent-coordinate dimension., Computational biology: parse a serialized hidden-state model and compute hidden-state count per observation-space dimension., Network science: load a serialized dynamical graph-process specification and compute process-state count per embedding dimension.",
@@ -46,7 +46,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "modelspecloadingandsizing",
+            "name": "model_spec_loading_and_sizing",
             "type_signature": "(filename: str) -> tuple[ModelDSpec, float]",
             "docstring": "Loads serialized model data and exposes structural sizing metadata for downstream computation.",
             "conceptual_summary": "SerializedStructureIngestionAndComplexityRatioExtraction. Reads a serialized structured artifact from a valid filesystem path and deserializes it into a typed in-memory specification for computation. It then derives a normalized structural complexity metric by computing the ratio between discrete state cardinality and representational dimensionality. The operation maps persistent encoded data into both an executable structural object and a scalar size invariant.. Applications: Finite-element engineering: load a serialized solver/mesh specification and compute state-variable density per geometric dimension., Robotics autonomy: ingest a serialized transition-system model and compute state-cardinality per latent-coordinate dimension., Computational biology: parse a serialized hidden-state model and compute hidden-state count per observation-space dimension., Network science: load a serialized dynamical graph-process specification and compute process-state count per embedding dimension.",
@@ -661,7 +661,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "controlinputsynthesis",
+      "predicate_id": "control_input_synthesis",
       "statement": "(_x: array-like, _x_dot: array-like, _t: float) -> array-like",
       "informal_desc": "Synthesizes control action from current state and derivative information.",
       "prover": "python",
@@ -670,7 +670,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "controlinputsynthesis",
+          "name": "control_input_synthesis",
           "type_signature": "(_x: array-like, _x_dot: array-like, _t: float) -> array-like",
           "docstring": "Synthesizes control action from current state and derivative information.",
           "conceptual_summary": "State-Tangent-to-Input Projection. Computes a vector-valued input by applying a synthesis map to an instantaneous state vector, its first-order time derivative estimate, and a scalar temporal coordinate. The transform converts local phase-space information (position in state space plus tangent direction) into an admissible excitation vector for the governed dynamics. This is a causal per-step feedback projection that may be linear or nonlinear and may vary with time.. Applications: Trajectory stabilization in autonomous aerial navigation using state and rate estimates, Infusion-rate computation in physiological regulation models from concentration states and slopes, Coil-current command synthesis in electromagnetic plasma-shaping systems, Thermal actuator drive generation in semiconductor process chambers from temperature fields and gradients",
@@ -690,7 +690,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "controlinputsynthesis",
+          "name": "control_input_synthesis",
           "type_signature": "(_x: array-like, _x_dot: array-like, _t: float) -> array-like",
           "docstring": "Synthesizes control action from current state and derivative information.",
           "conceptual_summary": "State-Tangent-to-Input Projection. Computes a vector-valued input by applying a synthesis map to an instantaneous state vector, its first-order time derivative estimate, and a scalar temporal coordinate. The transform converts local phase-space information (position in state space plus tangent direction) into an admissible excitation vector for the governed dynamics. This is a causal per-step feedback projection that may be linear or nonlinear and may vary with time.. Applications: Trajectory stabilization in autonomous aerial navigation using state and rate estimates, Infusion-rate computation in physiological regulation models from concentration states and slopes, Coil-current command synthesis in electromagnetic plasma-shaping systems, Thermal actuator drive generation in semiconductor process chambers from temperature fields and gradients",
@@ -706,7 +706,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "controlinputsynthesis",
+            "name": "control_input_synthesis",
             "type_signature": "(_x: array-like, _x_dot: array-like, _t: float) -> array-like",
             "docstring": "Synthesizes control action from current state and derivative information.",
             "conceptual_summary": "State-Tangent-to-Input Projection. Computes a vector-valued input by applying a synthesis map to an instantaneous state vector, its first-order time derivative estimate, and a scalar temporal coordinate. The transform converts local phase-space information (position in state space plus tangent direction) into an admissible excitation vector for the governed dynamics. This is a causal per-step feedback projection that may be linear or nonlinear and may vary with time.. Applications: Trajectory stabilization in autonomous aerial navigation using state and rate estimates, Infusion-rate computation in physiological regulation models from concentration states and slopes, Coil-current command synthesis in electromagnetic plasma-shaping systems, Thermal actuator drive generation in semiconductor process chambers from temperature fields and gradients",

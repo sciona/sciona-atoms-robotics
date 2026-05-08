@@ -27,7 +27,7 @@ string = str
 @icontract.require(lambda length_front: isinstance(length_front, (float, int, np.number)), "length_front must be numeric")
 @icontract.require(lambda length_rear: isinstance(length_rear, (float, int, np.number)), "length_rear must be numeric")
 @icontract.ensure(lambda result: result is not None, "ConstructGeometryModel output must not be None")
-def constructgeometrymodel(length_front: float, length_rear: float) -> ModelSpec:
+def construct_geometry_model(length_front: float, length_rear: float) -> ModelSpec:
     """Create an immutable vehicle geometry/state model from explicit axle-length parameters.
 
     Args:
@@ -42,7 +42,7 @@ def constructgeometrymodel(length_front: float, length_rear: float) -> ModelSpec
 @register_atom(witness_loadmodelfromfile)  # type: ignore[untyped-decorator]
 @icontract.require(lambda filename: filename is not None, "filename cannot be None")
 @icontract.ensure(lambda result: result is not None, "LoadModelFromFile output must not be None")
-def loadmodelfromfile(filename: string) -> ModelSpec:
+def load_model_from_file(filename: string) -> ModelSpec:
     """Deserialize model geometry parameters from storage into an immutable model spec.
 
     Args:
@@ -58,7 +58,7 @@ def loadmodelfromfile(filename: string) -> ModelSpec:
 @register_atom(witness_querygeometryparameters)  # type: ignore[untyped-decorator]
 @icontract.require(lambda model_spec: model_spec is not None, "model_spec cannot be None")
 @icontract.ensure(lambda result: all(r is not None for r in result), "QueryGeometryParameters all outputs must not be None")
-def querygeometryparameters(model_spec: ModelSpec) -> tuple[float, float, float]:
+def query_geometry_parameters(model_spec: ModelSpec) -> tuple[float, float, float]:
     """Project front length, rear length, and derived wheelbase from the immutable model spec.
 
     Args:
@@ -74,7 +74,7 @@ def querygeometryparameters(model_spec: ModelSpec) -> tuple[float, float, float]
 @register_atom(witness_computesideslipangle)  # type: ignore[untyped-decorator]
 @icontract.require(lambda road_wheel_angle: isinstance(road_wheel_angle, (float, int, np.number)), "road_wheel_angle must be numeric")
 @icontract.ensure(lambda result: result is not None, "ComputeSideslipAngle output must not be None")
-def computesideslipangle(model_spec: ModelSpec, road_wheel_angle: float) -> float:
+def compute_side_slip_angle(model_spec: ModelSpec, road_wheel_angle: float) -> float:
     """Compute sideslip from steering input and vehicle geometry as a pure kinematic transform.
 
     Args:
@@ -95,7 +95,7 @@ def computesideslipangle(model_spec: ModelSpec, road_wheel_angle: float) -> floa
 @icontract.require(lambda x: x is not None, "x cannot be None")
 @icontract.require(lambda u: u is not None, "u cannot be None")
 @icontract.ensure(lambda result: all(r is not None for r in result), "ComputeLinearizedStateMatrices all outputs must not be None")
-def computelinearizedstatematrices(model_spec: ModelSpec, x: StateVector, u: ControlVector) -> tuple[Matrix, Matrix]:
+def compute_linearized_state_matrices(model_spec: ModelSpec, x: StateVector, u: ControlVector) -> tuple[Matrix, Matrix]:
     """Compute linearized system matrices for local dynamics around state/control operating point.
 
     Args:
@@ -136,7 +136,7 @@ def computelinearizedstatematrices(model_spec: ModelSpec, x: StateVector, u: Con
 @register_atom(witness_evaluateandinvertdynamics)  # type: ignore[untyped-decorator]
 @icontract.require(lambda _t: isinstance(_t, (float, int, np.number)), "_t must be numeric")
 @icontract.ensure(lambda result: all(r is not None for r in result), "EvaluateAndInvertDynamics all outputs must not be None")
-def evaluateandinvertdynamics(model_spec: ModelSpec, x: StateVector, u: ControlVector, _t: float, _x_dot: StateDerivativeVector) -> tuple[StateDerivativeVector, Matrix, ControlVector]:
+def evaluate_and_invert_dynamics(model_spec: ModelSpec, x: StateVector, u: ControlVector, _t: float, _x_dot: StateDerivativeVector) -> tuple[StateDerivativeVector, Matrix, ControlVector]:
     """Evaluate nonlinear derivatives, compute Jacobian at time t, and solve inverse-input mapping as pure transforms.
 
     Args:

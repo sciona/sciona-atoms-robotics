@@ -19,7 +19,7 @@ from .witnesses import (
 @register_atom(witness_modelspecloadingandsizing)
 @icontract.require(lambda filename: isinstance(filename, str), "filename must be str")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
-def modelspecloadingandsizing(filename: str) -> tuple[np.ndarray, float]:
+def model_spec_loading_and_sizing(filename: str) -> tuple[np.ndarray, float]:
     """Load serialized model data and expose structural sizing metadata.
 
     Args:
@@ -43,7 +43,7 @@ def modelspecloadingandsizing(filename: str) -> tuple[np.ndarray, float]:
 @icontract.require(lambda position_current: isinstance(position_current, np.ndarray), "position_current must be np.ndarray")
 @icontract.require(lambda position_goal: isinstance(position_goal, np.ndarray), "position_goal must be np.ndarray")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
-def kinematicgoalfeasibility(
+def kinematic_goal_feasibility(
     angles_desired: np.ndarray,
     position_desired: np.ndarray,
     x: np.ndarray,
@@ -75,7 +75,7 @@ def kinematicgoalfeasibility(
 @icontract.require(lambda u: isinstance(u, np.ndarray), "u must be np.ndarray")
 @icontract.require(lambda _t: isinstance(_t, (float, int, np.number)), "_t must be numeric")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
-def dynamicsandlinearizationkernel(x: np.ndarray, u: np.ndarray, _t: float) -> tuple[np.ndarray, np.ndarray]:
+def dynamics_and_linearization_kernel(x: np.ndarray, u: np.ndarray, _t: float) -> tuple[np.ndarray, np.ndarray]:
     """Evaluate continuous-time state derivatives and local Jacobian linearization.
 
     Args:
@@ -100,7 +100,7 @@ def dynamicsandlinearizationkernel(x: np.ndarray, u: np.ndarray, _t: float) -> t
 @icontract.require(lambda _x_dot: isinstance(_x_dot, np.ndarray), "_x_dot must be np.ndarray")
 @icontract.require(lambda _t: isinstance(_t, (float, int, np.number)), "_t must be numeric")
 @icontract.ensure(lambda result: isinstance(result, np.ndarray), "result must be np.ndarray")
-def controlinputsynthesis(_x: np.ndarray, _x_dot: np.ndarray, _t: float) -> np.ndarray:
+def control_input_synthesis(_x: np.ndarray, _x_dot: np.ndarray, _t: float) -> np.ndarray:
     """Synthesize control action from current state and derivative information.
 
     Args:

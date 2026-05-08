@@ -32,7 +32,7 @@
     {
       "node_id": "initialize_yaw_lock_state",
       "parent_id": "YawLock_root",
-      "name": "InitializeYawLockState",
+      "name": "initialize_yaw_lock_state",
       "description": "Create the initial immutable YawLockState container for all persistent fields (parameters, standing flag, joint state, standing links).",
       "concept_type": "arithmetic",
       "inputs": [
@@ -65,7 +65,7 @@
     {
       "node_id": "configure_correction_and_yaw_slip_policy",
       "parent_id": "YawLock_root",
-      "name": "ConfigureCorrectionAndYawSlipPolicy",
+      "name": "configure_correction_and_yaw_slip_policy",
       "description": "Set correction cadence and yaw-slip detection policy by returning a new state with updated parameter fields.",
       "concept_type": "state_init",
       "inputs": [
@@ -118,7 +118,7 @@
     {
       "node_id": "set_robot_standing_status",
       "parent_id": "YawLock_root",
-      "name": "SetRobotStandingStatus",
+      "name": "set_robot_standing_status",
       "description": "Write robot standing status by producing a new immutable state.",
       "concept_type": "state_init",
       "inputs": [
@@ -156,7 +156,7 @@
     {
       "node_id": "read_robot_standing_status",
       "parent_id": "YawLock_root",
-      "name": "ReadRobotStandingStatus",
+      "name": "read_robot_standing_status",
       "description": "Read current robot standing status from immutable state without mutation.",
       "concept_type": "data_extraction",
       "inputs": [
@@ -189,7 +189,7 @@
     {
       "node_id": "set_joint_pose_and_initial_angles",
       "parent_id": "YawLock_root",
-      "name": "SetJointPoseAndInitialAngles",
+      "name": "set_joint_pose_and_initial_angles",
       "description": "Store joint identity/position inputs and corresponding initial-angle snapshot as a new immutable state.",
       "concept_type": "data_extraction",
       "inputs": [
@@ -237,7 +237,7 @@
     {
       "node_id": "read_initial_joint_angles",
       "parent_id": "YawLock_root",
-      "name": "ReadInitialJointAngles",
+      "name": "read_initial_joint_angles",
       "description": "Read stored initial joint angles from immutable state.",
       "concept_type": "data_extraction",
       "inputs": [
@@ -270,7 +270,7 @@
     {
       "node_id": "set_standing_link_targets",
       "parent_id": "YawLock_root",
-      "name": "SetStandingLinkTargets",
+      "name": "set_standing_link_targets",
       "description": "Set left/right standing link identifiers in a newly returned immutable state.",
       "concept_type": "state_init",
       "inputs": [

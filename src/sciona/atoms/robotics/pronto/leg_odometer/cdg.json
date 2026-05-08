@@ -27,7 +27,7 @@
     {
       "node_id": "velocity_state_readout",
       "parent_id": "LegOdometer_root",
-      "name": "VelocityStateReadout",
+      "name": "velocity_state_readout",
       "description": "Reads immutable velocity state-space components (body-frame velocity and its covariance) and returns the current velocity estimate.",
       "concept_type": "data_extraction",
       "inputs": [
@@ -65,7 +65,7 @@
     {
       "node_id": "pose_query_accessors",
       "parent_id": "LegOdometer_root",
-      "name": "PoseQueryAccessors",
+      "name": "pose_query_accessors",
       "description": "Provides stateless pose-related query endpoints and no-op/placeholder call sites with no declared state reads or writes.",
       "concept_type": "data_extraction",
       "inputs": [

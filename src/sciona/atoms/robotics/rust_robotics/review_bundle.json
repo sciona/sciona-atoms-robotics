@@ -117,7 +117,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[3]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.computelinearizedstatematrices@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.compute_linearized_state_matrices@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98",
       "subfamily": "bicycle_kinematic",
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:98",
       "review_status": "reviewed",
@@ -134,7 +134,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[4]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.computesideslipangle@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.compute_side_slip_angle@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77",
       "subfamily": "bicycle_kinematic",
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:77",
       "review_status": "reviewed",
@@ -151,7 +151,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[5]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.constructgeometrymodel@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.construct_geometry_model@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30",
       "subfamily": "bicycle_kinematic",
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:30",
       "review_status": "reviewed",
@@ -168,7 +168,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[6]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.evaluateandinvertdynamics@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.evaluate_and_invert_dynamics@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139",
       "subfamily": "bicycle_kinematic",
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:139",
       "review_status": "reviewed",
@@ -185,7 +185,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[7]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.loadmodelfromfile@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.load_model_from_file@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45",
       "subfamily": "bicycle_kinematic",
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:45",
       "review_status": "reviewed",
@@ -202,7 +202,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[8]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.querygeometryparameters@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.bicycle_kinematic.query_geometry_parameters@sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61",
       "subfamily": "bicycle_kinematic",
       "source_path": "sciona/atoms/robotics/rust_robotics/bicycle_kinematic/atoms.py:61",
       "review_status": "reviewed",
@@ -363,7 +363,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[17]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.controlinputsynthesis@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:103",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.control_input_synthesis@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:103",
       "subfamily": "n_joint_arm_2d",
       "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:103",
       "review_status": "reviewed",
@@ -381,7 +381,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[18]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.dynamicsandlinearizationkernel@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:78",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.dynamics_and_linearization_kernel@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:78",
       "subfamily": "n_joint_arm_2d",
       "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:78",
       "review_status": "reviewed",
@@ -399,7 +399,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[19]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.kinematicgoalfeasibility@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:46",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.kinematic_goal_feasibility@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:46",
       "subfamily": "n_joint_arm_2d",
       "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:46",
       "review_status": "reviewed",
@@ -417,7 +417,7 @@
       "review_record_path": "src/sciona/atoms/robotics/rust_robotics/review_bundle.json#rows[20]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.modelspecloadingandsizing@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:22",
+      "atom_fqdn": "sciona.atoms.robotics.rust_robotics.n_joint_arm_2d.model_spec_loading_and_sizing@sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:22",
       "subfamily": "n_joint_arm_2d",
       "source_path": "sciona/atoms/robotics/rust_robotics/n_joint_arm_2d/atoms.py:22",
       "review_status": "reviewed",

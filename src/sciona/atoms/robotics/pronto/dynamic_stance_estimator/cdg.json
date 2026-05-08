@@ -29,7 +29,7 @@
     {
       "node_id": "initialize_filter",
       "parent_id": "DynamicStanceEstimator_root",
-      "name": "InitializeFilter",
+      "name": "initialize_filter",
       "description": "Initializes the state-space model with prior state, covariance, and static model parameters.",
       "concept_type": "prior_init",
       "inputs": [
@@ -92,7 +92,7 @@
     {
       "node_id": "predict_step",
       "parent_id": "DynamicStanceEstimator_root",
-      "name": "PredictStep",
+      "name": "predict_step",
       "description": "Predicts the next state and covariance based on the state transition model (prediction step of Kalman filter).",
       "concept_type": "sequential_filter",
       "inputs": [
@@ -158,7 +158,7 @@
     {
       "node_id": "update_step",
       "parent_id": "DynamicStanceEstimator_root",
-      "name": "UpdateStep",
+      "name": "update_step",
       "description": "Updates the state and covariance based on a new measurement (update step of Kalman filter).",
       "concept_type": "posterior_update",
       "inputs": [
@@ -224,7 +224,7 @@
     {
       "node_id": "query_stance",
       "parent_id": "DynamicStanceEstimator_root",
-      "name": "QueryStance",
+      "name": "query_stance",
       "description": "Extracts the stance (position) from the state vector.",
       "concept_type": "data_extraction",
       "inputs": [

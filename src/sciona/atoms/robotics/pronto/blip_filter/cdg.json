@@ -30,7 +30,7 @@
     {
       "node_id": "bandpass_filter",
       "parent_id": "BlipFilter_root",
-      "name": "Bandpass Filter",
+      "name": "bandpass_filter",
       "description": "Apply FIR bandpass filter (3-45 Hz) to remove baseline wander and high-frequency noise from the raw ECG signal.",
       "concept_type": "signal_filter",
       "inputs": [
@@ -63,7 +63,7 @@
     {
       "node_id": "r_peak_detection",
       "parent_id": "BlipFilter_root",
-      "name": "R-Peak Detection",
+      "name": "r_peak_detection",
       "description": "Detect R-peak locations in the filtered ECG signal using the Hamilton segmenter algorithm.",
       "concept_type": "clustering",
       "inputs": [
@@ -96,7 +96,7 @@
     {
       "node_id": "peak_correction",
       "parent_id": "BlipFilter_root",
-      "name": "Peak Correction",
+      "name": "peak_correction",
       "description": "Correct R-peak locations to the nearest local maximum within a tolerance window.",
       "concept_type": "custom",
       "inputs": [
@@ -134,7 +134,7 @@
     {
       "node_id": "template_extraction",
       "parent_id": "BlipFilter_root",
-      "name": "Template Extraction",
+      "name": "template_extraction",
       "description": "Extract individual heartbeat waveform templates around each R-peak with configurable before/after windows.",
       "concept_type": "data_extraction",
       "inputs": [
@@ -177,7 +177,7 @@
     {
       "node_id": "heart_rate_computation",
       "parent_id": "BlipFilter_root",
-      "name": "Heart Rate Computation",
+      "name": "heart_rate_computation",
       "description": "Compute instantaneous heart rate in bpm from R-R intervals with optional smoothing.",
       "concept_type": "signal_filter",
       "inputs": [
