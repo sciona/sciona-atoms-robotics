@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initialize_filter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27": {
+    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initialize_filter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:32": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predict_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49": {
+    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predict_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:54": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -51,7 +51,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.query_stance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99": {
+    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.query_stance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:104": {
       "references": [
         {
           "ref_id": "camurri2020pronto",
@@ -76,7 +76,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.update_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73": {
+    "sciona.atoms.robotics.pronto.dynamic_stance_estimator.update_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:78": {
       "references": [
         {
           "ref_id": "camurri2020pronto",

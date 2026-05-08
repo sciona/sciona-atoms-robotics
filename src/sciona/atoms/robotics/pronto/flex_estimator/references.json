@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "sciona.atoms.robotics.pronto.flex_estimator.estimate_flex_deflection@sciona/atoms/robotics/pronto/flex_estimator/atoms.py:10": {
+    "sciona.atoms.robotics.pronto.flex_estimator.estimate_flex_deflection@sciona/atoms/robotics/pronto/flex_estimator/atoms.py:23": {
       "references": [
         {
           "ref_id": "camurri2020pronto",

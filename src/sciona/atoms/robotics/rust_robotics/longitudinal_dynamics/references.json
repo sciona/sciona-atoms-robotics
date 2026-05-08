@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_aerodynamic_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:53": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_aerodynamic_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:70": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -16,7 +16,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_gravity_grade_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:91": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_gravity_grade_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:108": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -31,7 +31,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_rolling_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:72": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.compute_rolling_force@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:89": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -46,7 +46,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.deserialize_model_spec@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:208": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.deserialize_model_spec@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:225": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -61,7 +61,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.evaluate_dynamics_derivatives@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:111": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.evaluate_dynamics_derivatives@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:128": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -76,7 +76,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.initialize_model@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:27": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.initialize_model@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:44": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -91,7 +91,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.linearize_dynamics@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:145": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.linearize_dynamics@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:162": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",
@@ -106,7 +106,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.solve_control_for_target_derivative@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:175": {
+    "sciona.atoms.robotics.rust_robotics.longitudinal_dynamics.solve_control_for_target_derivative@sciona/atoms/robotics/rust_robotics/longitudinal_dynamics/atoms.py:192": {
       "references": [
         {
           "ref_id": "repo_rust_robotics",

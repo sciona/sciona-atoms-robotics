@@ -246,7 +246,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[7]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initialize_filter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.initialize_filter@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:32",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:27",
       "review_status": "reviewed",
@@ -263,7 +263,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[8]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predict_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.predict_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:54",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:49",
       "review_status": "reviewed",
@@ -280,7 +280,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[9]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.query_stance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.query_stance@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:104",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:99",
       "review_status": "reviewed",
@@ -297,7 +297,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[10]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.update_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.dynamic_stance_estimator.update_step@sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:78",
       "subfamily": "dynamic_stance_estimator",
       "source_path": "sciona/atoms/robotics/pronto/dynamic_stance_estimator/atoms.py:73",
       "review_status": "reviewed",
@@ -348,7 +348,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[13]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.foot_contact.foot_sensing_state_update@sciona/atoms/robotics/pronto/foot_contact/atoms.py:22",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.foot_contact.foot_sensing_state_update@sciona/atoms/robotics/pronto/foot_contact/atoms.py:29",
       "subfamily": "foot_contact",
       "source_path": "sciona/atoms/robotics/pronto/foot_contact/atoms.py:22",
       "review_status": "reviewed",
@@ -365,7 +365,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[14]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.foot_contact.mode_snapshot_readout@sciona/atoms/robotics/pronto/foot_contact/atoms.py:40",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.foot_contact.mode_snapshot_readout@sciona/atoms/robotics/pronto/foot_contact/atoms.py:47",
       "subfamily": "foot_contact",
       "source_path": "sciona/atoms/robotics/pronto/foot_contact/atoms.py:40",
       "review_status": "reviewed",
@@ -416,7 +416,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[17]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.configure_correction_and_yaw_slip_policy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.configure_correction_and_yaw_slip_policy@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:69",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:61",
       "review_status": "reviewed",
@@ -433,7 +433,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[18]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.initialize_yaw_lock_state@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.initialize_yaw_lock_state@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:42",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:34",
       "review_status": "reviewed",
@@ -450,7 +450,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[19]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.read_initial_joint_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.read_initial_joint_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:153",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:145",
       "review_status": "reviewed",
@@ -467,7 +467,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[20]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.read_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.read_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:110",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:102",
       "review_status": "reviewed",
@@ -484,7 +484,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[21]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_joint_pose_and_initial_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_joint_pose_and_initial_angles@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:127",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:119",
       "review_status": "reviewed",
@@ -501,7 +501,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[22]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_robot_standing_status@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:93",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:85",
       "review_status": "reviewed",
@@ -518,7 +518,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[23]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_standing_link_targets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.yaw_lock.set_standing_link_targets@sciona/atoms/robotics/pronto/yaw_lock/atoms.py:169",
       "subfamily": "yaw_lock",
       "source_path": "sciona/atoms/robotics/pronto/yaw_lock/atoms.py:161",
       "review_status": "reviewed",
@@ -535,7 +535,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[24]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.inverse_schmitt.inverse_schmitt_trigger_transform@sciona/atoms/robotics/pronto/inverse_schmitt/atoms.py:16",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.inverse_schmitt.inverse_schmitt_trigger_transform@sciona/atoms/robotics/pronto/inverse_schmitt/atoms.py:18",
       "subfamily": "inverse_schmitt",
       "source_path": "sciona/atoms/robotics/pronto/inverse_schmitt/atoms.py:16",
       "review_status": "reviewed",
@@ -552,7 +552,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[25]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.state_estimator.update_state_estimate@sciona/atoms/robotics/pronto/state_estimator/atoms.py:10",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.state_estimator.update_state_estimate@sciona/atoms/robotics/pronto/state_estimator/atoms.py:24",
       "subfamily": "state_estimator",
       "source_path": "sciona/atoms/robotics/pronto/state_estimator/atoms.py:10",
       "review_status": "reviewed",
@@ -569,7 +569,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[26]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.ekf_smoother.initialize_state_estimator_state@sciona/atoms/robotics/pronto/ekf_smoother/atoms.py:24",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.ekf_smoother.initialize_state_estimator_state@sciona/atoms/robotics/pronto/ekf_smoother/atoms.py:31",
       "subfamily": "ekf_smoother",
       "source_path": "sciona/atoms/robotics/pronto/ekf_smoother/atoms.py:24",
       "review_status": "reviewed",
@@ -586,7 +586,7 @@
       "review_record_path": "src/sciona/atoms/robotics/pronto/review_bundle.json#rows[27]"
     },
     {
-      "atom_fqdn": "sciona.atoms.robotics.pronto.flex_estimator.estimate_flex_deflection@sciona/atoms/robotics/pronto/flex_estimator/atoms.py:10",
+      "atom_fqdn": "sciona.atoms.robotics.pronto.flex_estimator.estimate_flex_deflection@sciona/atoms/robotics/pronto/flex_estimator/atoms.py:23",
       "subfamily": "flex_estimator",
       "source_path": "sciona/atoms/robotics/pronto/flex_estimator/atoms.py:10",
       "review_status": "reviewed",
