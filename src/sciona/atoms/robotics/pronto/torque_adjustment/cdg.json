@@ -95,7 +95,11 @@
       "parallelizable": false,
       "conceptual_summary": "Pronto TorqueAdjustment::processSample semantics without mutating the caller's position vector.",
       "critic_notes": "",
-      "decomposition_rationale": "One atom captures the source-backed public transform while inlining the private clamp helper."
+      "decomposition_rationale": "One atom captures the source-backed public transform while inlining the private clamp helper.",
+      "time_complexity": "O(N + F)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "The function adjusts positions of N joints using effort-over-gain correction for F filtered joints in O(N + F) time and O(N) space.",
+      "complexity_confidence": 100
     }
   ]
 }

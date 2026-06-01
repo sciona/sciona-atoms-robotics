@@ -58,7 +58,11 @@
       "parallelizable": false,
       "conceptual_summary": "Frequency Band Isolation Transform. A transformation on a 1D ordered numerical vector that attenuates signal components whose frequencies lie outside a specified range. It functions as a selective sieve, preserving cyclical patterns within a target periodicity band while suppressing both low-frequency drifts and high-frequency noise.. Applications: Isolating specific seismic wave frequencies from raw seismograph readings to identify earthquake epicenters., Extracting the frequency range of a specific instrument or voice from a complex audio mix for audio engineering., Detrending financial time-series data by removing long-term market cycles and short-term noise to analyze mid-term business cycle volatility., Filtering radio telescope data to isolate the spectral emission lines of specific chemical elements, removing background cosmic noise and instrumental drift.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Applying the zero-phase second-order section (SOS) Butterworth filter is a linear operation on the N-length signal taking linear time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "r_peak_detection",
@@ -91,7 +95,11 @@
       "parallelizable": false,
       "conceptual_summary": "adaptive_threshold_peak_detector_1d. Identifies indices of prominent, positive-going local maxima within a 1D numerical sequence. The process involves calculating a rolling first-order difference to detect sharp increases, followed by an adaptive thresholding mechanism. This threshold is dynamically updated based on the amplitudes of previously identified peaks, allowing the detector to adjust to variations in the signal's baseline and noise levels.. Applications: Geophysics: Detecting the arrival times of seismic P-waves or S-waves from seismograph sensor data., Astrophysics: Identifying transient events like pulsars or fast radio bursts in time-series data from radio telescopes., Materials Science: Pinpointing fracture or acoustic emission events in sensor readings during stress testing of materials., Financial Engineering: Detecting sudden volume spikes in high-frequency trading data to signal significant market events.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Detecting R-peaks using amplitude thresholding and peak separation scans the N-length signal in linear time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "peak_correction",
@@ -129,7 +137,11 @@
       "parallelizable": false,
       "conceptual_summary": "Local Extremum Refinement. Refines a set of discrete indices by shifting each point to the location of the maximum value within a localized search window of a corresponding 1D numerical series. This operation improves the precision of event markers by aligning them with the nearest local optima, effectively correcting for initial estimation errors.. Applications: Astronomy: Pinpointing the exact centroid of a star from a noisy telescopic image by refining an initial approximate detection to the pixel of maximum luminosity., Genomics: Adjusting the predicted location of a transcription factor binding site in a ChIP-seq dataset to the specific base pair with the highest read-count peak., Materials Science: Identifying the precise point of material failure in stress-strain data by moving from a general region of interest to the exact data point of maximum stress before a drop., Financial Analysis: Correcting the timestamp of a detected stock price peak in high-frequency data to the precise millisecond of the local maximum before a reversal.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(M)",
+      "space_complexity": "O(M)",
+      "complexity_reasoning": "Correcting peak indices by finding the maximum inside a small, constant-sized tolerance window around each of the M peaks takes linear time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "template_extraction",
@@ -172,7 +184,11 @@
       "parallelizable": false,
       "conceptual_summary": "Event-Triggered Signal Epoching. Segments a 1D numerical series into a collection of fixed-length subsequences (epochs). Each subsequence is centered around a corresponding index provided in a separate list of 'event' markers. This operation effectively transforms a continuous signal into a stacked 2D array of discrete, event-aligned segments, while filtering out event markers that are too close to the signal's boundaries to form a complete epoch.. Applications: Geophysics: Extracting seismic P-wave and S-wave arrival waveforms from a continuous seismogram based on automatically detected arrival times., Finance: Isolating asset price fluctuations from a time-series immediately following discrete market events, such as earnings announcements or policy changes., Neuroscience: Aligning and averaging Event-Related Potentials (ERPs) from continuous EEG data, time-locked to the onset of external stimuli., Astrophysics: Segmenting light curve data from a star around periodic transit events (e.g., exoplanet transits or pulsar signals) to stack and enhance signal-to-noise ratio.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(M)",
+      "space_complexity": "O(M)",
+      "complexity_reasoning": "Slicing a fixed-sized window of 250 samples around each of the M peaks takes O(M) time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "heart_rate_computation",
@@ -210,7 +226,11 @@
       "parallelizable": false,
       "conceptual_summary": "SequenceToInstantaneousRate. Given a monotonically increasing 1D sequence of event indices, this operation computes the instantaneous frequency for each interval between consecutive events. It first calculates the deltas (differences) between adjacent indices, then computes the reciprocal of each delta to yield a rate. The resulting rate values are indexed to the midpoint of the interval from which they were derived.. Applications: Neuroscience: Calculating the instantaneous firing rate of a neuron from a series of recorded spike timestamps., Mechanical Engineering: Determining the instantaneous rotational speed (RPM) of a shaft from the sequence of pulses generated by a rotary encoder., Geophysics: Estimating the frequency of aftershocks or other seismic events based on their discrete arrival times., Finance: Analyzing the instantaneous rate of high-frequency trades for a security from their transaction timestamps.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(M)",
+      "space_complexity": "O(M)",
+      "complexity_reasoning": "Computing heart rates from R-R intervals requires simple single-pass difference and vectorized operations on the M peak indices in linear time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [

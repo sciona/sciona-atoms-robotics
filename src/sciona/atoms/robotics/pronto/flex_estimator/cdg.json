@@ -64,7 +64,11 @@
       "parallelizable": false,
       "conceptual_summary": "Compliance-model transform that maps hip efforts on stance legs to a per-leg flex deflection vector and zeros out swing legs.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
-      "decomposition_rationale": "Leaf atom."
+      "decomposition_rationale": "Leaf atom.",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "The function computes deflection for N legs in linear time and space by scaling hip efforts for stance legs.",
+      "complexity_confidence": 100
     }
   ],
   "edges": []

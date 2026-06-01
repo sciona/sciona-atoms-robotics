@@ -64,7 +64,11 @@
       "parallelizable": false,
       "conceptual_summary": "Immutable Asymmetric Offset Configuration. Constructs a canonical configuration object from two non-negative scalar offsets defined on opposite sides of a reference origin. The transform is a direct parameter-to-structure mapping with boundary validation, without optimization, recursion, or stochastic sampling. The resulting artifact is immutable, preserving the input values as fixed geometric/state invariants.. Applications: Robotics: instantiate a rigid-link kinematic segment model from proximal and distal link extents around a joint origin., Materials engineering: define an immutable cross-section descriptor from layer thicknesses on opposite sides of a neutral axis., Computational imaging: encode asymmetric sensor active-region margins (left/right or near/far) into a fixed calibration schema., Neuroscience modeling: represent asymmetric receptive-field spatial extents around a central reference point in a simulation state object.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function constructs a rigid geometry configuration dictionary from input scalars in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "load_model_from_file",
@@ -97,7 +101,11 @@
       "parallelizable": false,
       "conceptual_summary": "ImmutableStructuredSpecHydration. Accepts a locator to persisted serialized data, reads the byte stream, and decodes it using a predefined schema into a typed in-memory parameter structure. The reconstructed structure is then frozen so downstream computations can rely on referential stability and mutation-free semantics.. Applications: Hydrating finite-element mesh and boundary-condition specifications for mechanical simulation from a persisted artifact., Loading calibrated kinematic-chain parameters for robotic motion planning from a configuration file., Reconstructing neuroimaging preprocessing pipeline parameter sets from stored manifests for reproducible analysis., Restoring compiler optimization-pass configuration graphs from serialized build metadata.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function deserializes model geometry parameters from a small JSON file of bounded size in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "query_geometry_parameters",
@@ -140,7 +148,11 @@
       "parallelizable": false,
       "conceptual_summary": "Bipartite Scalar Projection with Additive Extent Derivation. The operation reads two non-negative scalar components from an immutable structured input and returns them directly as explicit outputs. It then computes a third scalar by linear addition of those components, producing a total 1D extent. No state is changed, and the mapping is fully deterministic.. Applications: Genomics: expose upstream/downstream sequence segment lengths and derive total amplicon span., Network engineering: expose forward/reverse path propagation delays and derive round-trip baseline delay., Manufacturing process planning: expose pre-process/post-process motion distances and derive total traverse distance., Signal processing: expose pre-event/post-event window durations and derive full analysis window length.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function extracts geometry parameters and derives the wheelbase via basic addition in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "compute_side_slip_angle",
@@ -178,7 +190,11 @@
       "parallelizable": false,
       "conceptual_summary": "Kinematic Deflection-to-Drift Angle Projection. Maps a single control deflection angle and fixed rigid-body geometry parameters to an instantaneous orientation offset angle using a closed-form trigonometric relation. The transform is purely kinematic (no forces, no integration over time): it projects local actuator deflection into global trajectory-direction deviation relative to a body-aligned reference axis. Zero input deflection yields zero output offset, and output sign follows input sign under symmetric parameterization.. Applications: Planar mobile robotics: convert steering-joint deflection and platform geometry into trajectory-heading offset for path tracking., Aerospace guidance: map control-surface deflection and airframe geometry to instantaneous flight-path angular deviation in simplified kinematic models., Catheter/continuum-tool navigation: translate proximal angular actuation and segment geometry into tip-direction offset estimates., Computer graphics/animation kinematics: derive motion-direction offset from joint rotation and rig geometry for procedural locomotion.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes the vehicle's sideslip angle using standard trigonometric equations in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "compute_linearized_state_matrices",
@@ -285,7 +301,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes auxiliary kinematic and heading geometry terms at the operating point in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "linearizestatedynamicswrtstate",
@@ -323,7 +343,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes the 4x4 state Jacobian matrix A at the operating point in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "linearizedynamicswrtvelocityinput",
@@ -371,7 +395,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes the velocity sensitivity components of the input Jacobian B in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "linearizedynamicswrtsteeringinput",
@@ -419,7 +447,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes the steering sensitivity components of the input Jacobian B in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "assemblecontroljacobian",
@@ -457,7 +489,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function builds the final 4x2 input Jacobian matrix B at the operating point in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "evaluate_and_invert_dynamics",
@@ -578,7 +614,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes the slip-adjusted kinematic velocity terms in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "evaluatenonlinearstatederivative",
@@ -626,7 +666,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function evaluates the continuous-time derivative of the 4D state vector in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "linearizedynamicsatoperatingpoint",
@@ -674,7 +718,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function computes the full Jacobian of the system dynamics at the operating point in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "infercontrolfromstaterate",
@@ -722,7 +770,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function algebraically reconstructs the control inputs from a desired state derivative in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [

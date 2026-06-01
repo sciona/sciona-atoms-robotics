@@ -54,7 +54,11 @@
       "parallelizable": false,
       "conceptual_summary": "Stateless hysteresis threshold transform with a preserved prior-state region between low and high thresholds.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
-      "decomposition_rationale": "Leaf atom."
+      "decomposition_rationale": "Leaf atom.",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "The function applies an inverse Schmitt trigger in linear time and space by iterating once over the N-length signal.",
+      "complexity_confidence": 100
     }
   ],
   "edges": []

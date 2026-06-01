@@ -63,7 +63,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "The function computes cumulative sums and trigonometric projections over the input array of size N in linear time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "dijkstra_path_planning",
@@ -102,7 +106,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(V^2)",
+      "space_complexity": "O(V^2)",
+      "complexity_reasoning": "The algorithm iteratively finds the minimum distance node using a linear scan of size V, executing in O(V^2) time and copying the V x V adjacency matrix in O(V^2) space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

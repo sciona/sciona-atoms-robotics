@@ -48,7 +48,11 @@
       "parallelizable": false,
       "conceptual_summary": "Deterministic initializer for the EKF smoother state bundle, including state vector, covariance, linear dynamics, and empty histories.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
-      "decomposition_rationale": "Leaf atom."
+      "decomposition_rationale": "Leaf atom.",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function initializes state, covariance, transition, and noise matrices of a fixed 6D system in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": []

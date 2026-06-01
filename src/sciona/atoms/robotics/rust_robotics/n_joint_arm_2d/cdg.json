@@ -62,7 +62,11 @@
       "parallelizable": false,
       "conceptual_summary": "SerializedStructureIngestionAndComplexityRatioExtraction. Reads a serialized structured artifact from a valid filesystem path and deserializes it into a typed in-memory specification for computation. It then derives a normalized structural complexity metric by computing the ratio between discrete state cardinality and representational dimensionality. The operation maps persistent encoded data into both an executable structural object and a scalar size invariant.. Applications: Finite-element engineering: load a serialized solver/mesh specification and compute state-variable density per geometric dimension., Robotics autonomy: ingest a serialized transition-system model and compute state-cardinality per latent-coordinate dimension., Computational biology: parse a serialized hidden-state model and compute hidden-state count per observation-space dimension., Network science: load a serialized dynamical graph-process specification and compute process-state count per embedding dimension.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "The function loads kinematic parameters from a file and computes total reach in linear time and space relative to the link count N.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "kinematic_goal_feasibility",
@@ -175,7 +179,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function calculates the squared Euclidean distance between two workspace positions in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "buildfeasiblestatefromdesiredangles",
@@ -218,7 +226,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "The function constructs the state vector by copying the desired N joint angles in linear time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "extractcurrentendeffectorposition",
@@ -261,7 +273,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Evaluating the forward kinematics of an N-joint kinematic chain to obtain the end-effector position requires O(N) trigonometric and link-propagation operations.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "computeiktargeterror",
@@ -304,13 +320,17 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Computing the workspace position error is a simple vector subtraction in the constant-dimension 2D workspace.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "assemblepositionjacobian",
       "parent_id": "kinematic_goal_feasibility",
       "name": "AssemblePositionJacobian",
-      "description": "Construct the 2xDOF position Jacobian from current chain state and link lengths by accumulating each joint’s positional influence.",
+      "description": "Construct the 2xDOF position Jacobian from current chain state and link lengths by accumulating each joint\u2019s positional influence.",
       "concept_type": "algebra",
       "inputs": [
         {
@@ -357,7 +377,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Constructing the 2 x N workspace Jacobian matrix for the kinematic chain requires O(N) partial derivative evaluations.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "solveleastsquaresjointupdate",
@@ -395,7 +419,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Solving the underdetermined linear system for a 2 x N Jacobian matrix takes O(N) time and space using pseudoinverse or standard solvers.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "dynamics_and_linearization_kernel",
@@ -500,7 +528,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Retrieving and validating the dimensions of the system state is a simple metadata query taking constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "evaluate_chain_state_derivative",
@@ -558,7 +590,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Evaluating the continuous-time derivative of the joint state vector takes linear time and space relative to the state dimension N.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "compute_local_jacobian_linearization",
@@ -606,7 +642,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N^2)",
+      "space_complexity": "O(N^2)",
+      "complexity_reasoning": "Constructing an N x N identity matrix representing the linearized system dynamics Jacobian requires O(N^2) time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "control_input_synthesis",
@@ -649,7 +689,11 @@
       "parallelizable": false,
       "conceptual_summary": "State-Tangent-to-Input Projection. Computes a vector-valued input by applying a synthesis map to an instantaneous state vector, its first-order time derivative estimate, and a scalar temporal coordinate. The transform converts local phase-space information (position in state space plus tangent direction) into an admissible excitation vector for the governed dynamics. This is a causal per-step feedback projection that may be linear or nonlinear and may vary with time.. Applications: Trajectory stabilization in autonomous aerial navigation using state and rate estimates, Infusion-rate computation in physiological regulation models from concentration states and slopes, Coil-current command synthesis in electromagnetic plasma-shaping systems, Thermal actuator drive generation in semiconductor process chambers from temperature fields and gradients",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Synthesizing the PD control commands involves element-wise scalar multiplications and subtractions on N-dimensional state vectors in linear time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [

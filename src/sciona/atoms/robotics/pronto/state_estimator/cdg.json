@@ -69,7 +69,11 @@
       "parallelizable": false,
       "conceptual_summary": "Linear measurement-update step that fuses a measurement into the prior state with a Kalman-style gain computed from the covariance and fixed measurement noise.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
-      "decomposition_rationale": "Leaf atom."
+      "decomposition_rationale": "Leaf atom.",
+      "time_complexity": "O(N^2 * M + M^3)",
+      "space_complexity": "O(N^2 + M^2)",
+      "complexity_reasoning": "Fusing a measurement via the Kalman filter requires matrix multiplications and inverting the innovation covariance of size M x M, taking O(N^2 * M + M^3) time and O(N^2 + M^2) space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": []

@@ -60,7 +60,11 @@
       "parallelizable": false,
       "conceptual_summary": "Binary Channel State Overwrite Transition. Transforms an immutable binary state snapshot by applying a command vector that specifies target values for each boolean channel. The operation constructs a new state object with updated channel bits rather than mutating the input snapshot. This is a discrete finite-state transition with direct per-field assignment and no intermediate optimization or inference.. Applications: Control engineering: updating a two-actuator enable/disable latch in a sampled-time controller., Computational biology instrumentation: setting a two-channel acquisition mask for a measurement cycle., Distributed systems: applying a two-flag runtime feature-state update in immutable configuration snapshots., Digital communications: overwriting a two-bit mode register in protocol state progression.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function merges foot sensing flags into a new dictionary in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "mode_snapshot_readout",
@@ -98,7 +102,11 @@
       "parallelizable": false,
       "conceptual_summary": "Lag-1 Discrete State Projection. Extracts two temporally adjacent categorical state tokens from an immutable composite snapshot and emits them as separate outputs. The mapping is a direct structural projection from a packed record to an explicit ordered pair representing present and immediately preceding state. No mutation, inference, or recomputation is performed; symbol identity is preserved exactly.. Applications: Finite-state controller diagnostics in robotics, exposing current and previous control regimes for transition validation, Communication protocol analyzers, surfacing current and prior parser states for handshake/sequence debugging, Compiler or interpreter pipeline tracing, reporting current and previous processing phases for execution observability, Industrial process automation monitoring, emitting current and prior machine operation states for rule-based safety checks",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function extracts the current and previous classifier modes from the state container in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

@@ -87,7 +87,11 @@
       "parallelizable": false,
       "conceptual_summary": "InitializeLinearDynamicalSystem. Instantiates the parameters for a discrete-time linear dynamical system. This operation partitions the system's definition into two components: the initial conditions (a state vector and its associated uncertainty matrix) and the static operators that govern the system's evolution. The static operators define the deterministic state transition, the projection from state to measurement, and the covariance structures of both process and measurement noise.. Applications: Robotics: Initializing a filter to track a moving object's position and velocity from noisy sensor (e.g., radar) readings., Econometrics: Defining a model to estimate the latent 'true' value of a financial asset based on its fluctuating, noisy market price., Neuroscience: Setting up a model of a single neuron's membrane potential dynamics, relating the unobserved internal voltage to observable spike train data., Chemical Engineering: Establishing the initial parameters for a state-observer that estimates reactant concentrations within a continuously stirred-tank reactor from periodic, noisy sensor measurements.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function initializes prior state and covariance matrices of a fixed 2D system in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "predict_step",
@@ -153,7 +157,11 @@
           "ordering": "sequential",
           "when": "Stage describes EKF with smoothing or forward-backward filtering"
         }
-      ]
+      ],
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The prediction step performs matrix-vector arithmetic on the fixed-size 2D Kalman filter state in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "update_step",
@@ -219,7 +227,11 @@
           "ordering": "sequential",
           "when": "Stage describes EKF with smoothing or forward-backward filtering"
         }
-      ]
+      ],
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The update step fuses new measurements into the 2D Kalman filter state via matrix multiplications and a 1x1 matrix inversion in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "query_stance",
@@ -252,7 +264,11 @@
       "parallelizable": false,
       "conceptual_summary": "ExtractPrimaryComponent. Selects and returns a single scalar component from a multi-dimensional state vector. This operation projects the state onto a single axis, isolating a specific quantity of interest from the broader system representation, which may include associated uncertainty or covariance data.. Applications: Extracting the estimated inflation rate from a state-space model of a national economy., Retrieving the activation value of a specific neuron from a layer's state tensor in an artificial neural network., Isolating the measured temperature from a multi-parameter vector describing a physical system's state (e.g., pressure, volume, temperature)., Determining a satellite's current altitude from its full 6D pose vector (position and orientation).",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "The function extracts the position scalar from the 2D state vector in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [
