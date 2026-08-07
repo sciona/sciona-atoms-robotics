@@ -5,49 +5,49 @@ import json
 import numpy as np
 
 from sciona.atoms.robotics.rust_robotics.bicycle_kinematic.atoms import (
-    computelinearizedstatematrices,
-    computesideslipangle,
-    constructgeometrymodel,
-    evaluateandinvertdynamics,
-    loadmodelfromfile,
-    querygeometryparameters,
+    compute_linearized_state_matrices,
+    compute_side_slip_angle,
+    construct_geometry_model,
+    evaluate_and_invert_dynamics,
+    load_model_from_file,
+    query_geometry_parameters,
 )
 
 
 def test_model_construction_and_queries_are_consistent() -> None:
-    model = constructgeometrymodel(1.2, 1.6)
+    model = construct_geometry_model(1.2, 1.6)
 
     assert model["lf"] == 1.2
     assert model["lr"] == 1.6
     assert model["L"] == 2.8
-    assert querygeometryparameters(model) == (1.2, 1.6, 2.8)
+    assert query_geometry_parameters(model) == (1.2, 1.6, 2.8)
 
 
 def test_load_model_from_file_round_trips_geometry(tmp_path) -> None:
     path = tmp_path / "bike.json"
     path.write_text(json.dumps({"lf": 1.4, "lr": 1.1, "L": 2.5}))
 
-    model = loadmodelfromfile(str(path))
+    model = load_model_from_file(str(path))
 
-    assert querygeometryparameters(model) == (1.4, 1.1, 2.5)
+    assert query_geometry_parameters(model) == (1.4, 1.1, 2.5)
 
 
 def test_sideslip_matches_closed_form_relation() -> None:
-    model = constructgeometrymodel(1.2, 1.6)
+    model = construct_geometry_model(1.2, 1.6)
     delta = 0.18
 
-    beta = computesideslipangle(model, delta)
+    beta = compute_side_slip_angle(model, delta)
 
     expected = np.arctan(model["lr"] / model["L"] * np.tan(delta))
     assert np.isclose(beta, expected)
 
 
 def test_linearization_matches_closed_form_bicycle_jacobians() -> None:
-    model = constructgeometrymodel(1.2, 1.6)
+    model = construct_geometry_model(1.2, 1.6)
     x = np.array([2.0, -1.0, 0.25, 8.0])
     u = np.array([0.12, 0.5])
 
-    A, B = computelinearizedstatematrices(model, x, u)
+    A, B = compute_linearized_state_matrices(model, x, u)
 
     theta = x[2]
     v = x[3]
@@ -75,12 +75,12 @@ def test_linearization_matches_closed_form_bicycle_jacobians() -> None:
 
 
 def test_forward_and_inverse_dynamics_are_internally_consistent() -> None:
-    model = constructgeometrymodel(1.2, 1.6)
+    model = construct_geometry_model(1.2, 1.6)
     x = np.array([0.0, 0.0, 0.35, 6.5])
     u = np.array([0.1, 1.25])
     desired = np.array([0.0, 0.0, 0.0, -0.75])
 
-    x_dot, jacobian, inferred = evaluateandinvertdynamics(model, x, u, 0.0, desired)
+    x_dot, jacobian, inferred = evaluate_and_invert_dynamics(model, x, u, 0.0, desired)
 
     beta = np.arctan(model["lr"] / model["L"] * np.tan(u[0]))
     expected_x_dot = np.array(

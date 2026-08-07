@@ -71,7 +71,7 @@
     {
       "node_id": "kinematic_goal_feasibility",
       "parent_id": "ModelD_root",
-      "name": "KinematicGoalFeasibility",
+      "name": "kinematic_goal_feasibility",
       "description": "Computes inverse-kinematic feasibility and goal-distance metrics for desired end-effector targets and initial state construction.",
       "concept_type": "geometry",
       "inputs": [
@@ -118,7 +118,7 @@
           "constraints": "non-negative"
         }
       ],
-      "status": "decomposed",
+      "status": "atomic",
       "children": [
         "computegoaldistancemetric",
         "buildfeasiblestatefromdesiredangles",
@@ -428,7 +428,7 @@
     {
       "node_id": "dynamics_and_linearization_kernel",
       "parent_id": "ModelD_root",
-      "name": "DynamicsAndLinearizationKernel",
+      "name": "dynamics_and_linearization_kernel",
       "description": "Evaluates continuous-time state derivatives and local Jacobian linearization of system dynamics.",
       "concept_type": "analysis",
       "inputs": [
@@ -460,7 +460,7 @@
           "constraints": "local linearization at (x,u,t)"
         }
       ],
-      "status": "decomposed",
+      "status": "atomic",
       "children": [
         "derive_and_validate_system_dimensions",
         "evaluate_chain_state_derivative",

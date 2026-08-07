@@ -31,13 +31,7 @@
       "name": "initialize_backlash_filter_state",
       "description": "Create the initial immutable state object for the filter parameters.",
       "concept_type": "state_init",
-      "inputs": [
-        {
-          "name": "config",
-          "type_desc": "object",
-          "constraints": "x is not None"
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
           "name": "state_out",

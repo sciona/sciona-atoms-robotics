@@ -72,13 +72,7 @@
       "name": "pose_query_accessors",
       "description": "Provides stateless pose-related query endpoints and no-op/placeholder call sites with no declared state reads or writes.",
       "concept_type": "data_extraction",
-      "inputs": [
-        {
-          "name": "pose",
-          "type_desc": "np.ndarray",
-          "constraints": "ndim >= 1"
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
           "name": "pose_related_outputs",

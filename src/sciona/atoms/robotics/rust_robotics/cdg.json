@@ -11,7 +11,9 @@
       "status": "decomposed",
       "children": [
         "n_joint_arm_solver",
-        "dijkstra_path_planning"
+        "dijkstra_path_planning",
+        "pure_pursuit",
+        "rk4"
       ],
       "depth": 0,
       "type_signature": "",
@@ -111,6 +113,59 @@
       "space_complexity": "O(V^2)",
       "complexity_reasoning": "The algorithm iteratively finds the minimum distance node using a linear scan of size V, executing in O(V^2) time and copying the V x V adjacency matrix in O(V^2) space.",
       "complexity_confidence": 100
+    },
+    {
+      "node_id": "pure_pursuit",
+      "parent_id": "RustRobotics_root",
+      "name": "pure_pursuit",
+      "description": "Compute a curvature-based heading correction from a geometric look-ahead target.",
+      "concept_type": "control",
+      "inputs": [
+        {"name": "position_current", "type_desc": "Point2D", "constraints": "current position"},
+        {"name": "position_target", "type_desc": "Point2D", "constraints": "target position"},
+        {"name": "yaw_current", "type_desc": "float", "constraints": "current heading in radians"},
+        {"name": "target_distance", "type_desc": "float", "constraints": "strictly positive"},
+        {"name": "wheelbase", "type_desc": "float", "constraints": "strictly positive"}
+      ],
+      "outputs": [{"name": "result", "type_desc": "float", "constraints": "steering correction in radians"}],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(position_current: Point2D, position_target: Point2D, yaw_current: float, target_distance: float, wheelbase: float) -> float",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Pure-pursuit steering correction evaluated by the native robotics implementation.",
+      "critic_notes": "Input and output contract derived from the Python wrapper signature and contract decorators.",
+      "decomposition_rationale": "Leaf atom."
+    },
+    {
+      "node_id": "rk4",
+      "parent_id": "RustRobotics_root",
+      "name": "rk4",
+      "description": "Advance an ODE state over one interval with fourth-order Runge-Kutta integration.",
+      "concept_type": "numerical_integration",
+      "inputs": [
+        {"name": "func", "type_desc": "Callable[[np.ndarray, float], np.ndarray]", "constraints": "state derivative callback"},
+        {"name": "x0", "type_desc": "np.ndarray", "constraints": "one-dimensional initial state"},
+        {"name": "t0", "type_desc": "float", "constraints": "initial time"},
+        {"name": "tf", "type_desc": "float", "constraints": "strictly greater than t0"}
+      ],
+      "outputs": [{"name": "result", "type_desc": "np.ndarray", "constraints": "same shape as x0"}],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(func: Callable[[np.ndarray, float], np.ndarray], x0: np.ndarray, t0: float, tf: float) -> np.ndarray",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "One-step fourth-order Runge-Kutta integration through the native numerical-method implementation.",
+      "critic_notes": "Input and output contract derived from the Python wrapper signature and contract decorators.",
+      "decomposition_rationale": "Leaf atom."
     }
   ],
   "edges": [],

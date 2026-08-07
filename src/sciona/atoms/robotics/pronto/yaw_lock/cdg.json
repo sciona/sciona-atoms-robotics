@@ -35,13 +35,7 @@
       "name": "initialize_yaw_lock_state",
       "description": "Create the initial immutable YawLockState container for all persistent fields (parameters, standing flag, joint state, standing links).",
       "concept_type": "arithmetic",
-      "inputs": [
-        {
-          "name": "config",
-          "type_desc": "object",
-          "constraints": "x is not None"
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
           "name": "yaw_lock_state",

@@ -199,7 +199,7 @@
     {
       "node_id": "compute_linearized_state_matrices",
       "parent_id": "Model_root",
-      "name": "ComputeLinearizedStateMatrices",
+      "name": "compute_linearized_state_matrices",
       "description": "Compute linearized system matrices for local dynamics around state/control operating point.",
       "concept_type": "algebra",
       "inputs": [
@@ -231,7 +231,7 @@
           "constraints": "input Jacobian / linearization matrix"
         }
       ],
-      "status": "decomposed",
+      "status": "atomic",
       "children": [
         "deriveoperatingpointgeometry",
         "linearizestatedynamicswrtstate",
@@ -498,7 +498,7 @@
     {
       "node_id": "evaluate_and_invert_dynamics",
       "parent_id": "Model_root",
-      "name": "EvaluateAndInvertDynamics",
+      "name": "evaluate_and_invert_dynamics",
       "description": "Evaluate nonlinear derivatives, compute Jacobian at time t, and solve inverse-input mapping as pure transforms.",
       "concept_type": "analysis",
       "inputs": [
@@ -545,7 +545,7 @@
           "constraints": "inverse-mapped control from (x,x_dot,t)"
         }
       ],
-      "status": "decomposed",
+      "status": "atomic",
       "children": [
         "deriveslipadjustedkinematics",
         "evaluatenonlinearstatederivative",
